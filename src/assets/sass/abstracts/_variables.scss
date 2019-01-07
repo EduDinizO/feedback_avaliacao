@@ -1,15 +1,31 @@
 // COLORS
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-$color-secondary-light: #ffb900;
-$color-secondary-dark: #ff7730;
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa;
+$color-orange: #FDC14A;
+$color-green: #46BA0B;
+$color-red: #F1634B;
+$color-blue: #0083B0;
+$color-blue-light: #00B4DB;
+$color-transparent: transparent;
 $color-white: #FFF;
-$color-black: #000;
-$color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eee;
-$color-grey-dark: #777;
-$color-grey-dark-2: #999;
-$color-grey-dark-3: #333;
+$color-black: #2d2d2d;
+$color-grey: #A0B0C0;
+$color-background-light: #F9FBFC;
+$color-grey-opacity: rgba(52, 85, 97, 0.15);
+$color-grey-light-1: #EFF1F2; //#ECF2F5
+$color-grey-light-2: #C5D2DC;
+$color-grey-dark: #747C81;
+$color-grey-dark-2: #D8D8D8;
+$color-box-shadow: rgba(97, 110, 152, 0.2);
+// TEXT COLORS
+$color-text-light: #F9FBFC;
+$color-text-dark: #345561;
+// FONTS
+$font-osb: 'openSansBold';
+$font-osbi: 'openSansBoldItalic';
+$font-oseb: 'openSansExtraBold';
+$font-osebi: 'openSansExtraBoldItalic';
+$font-osi: 'openSansItalic';
+$font-osl: 'openSansLight';
+$font-osli: 'openSansLightItalic';
+$font-osr: 'openSansRegular';
+$font-ossb: 'openSansSemiBold';
+$font-ossbi: 'openSansSemiBoldItalic';

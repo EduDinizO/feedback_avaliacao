@@ -1,7 +1,56 @@
-// add font properties here
+@font-face {
+    font-family: openSansBold;
+    src: url(assets/fonts/openSans/OpenSans-Bold.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: openSansBoldItalic;
+    src: url(assets/fonts/openSans/OpenSans-BoldItalic.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: openSansExtraBold;
+    src: url(assets/fonts/openSans/OpenSans-ExtraBold.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: openSansExtraBoldItalic;
+    src: url(assets/fonts/openSans/OpenSans-ExtraBoldItalic.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: openSansItalic;
+    src: url(assets/fonts/openSans/OpenSans-Italic.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: openSansLight;
+    src: url(assets/fonts/openSans/OpenSans-Light.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: openSansLightItalic;
+    src: url(assets/fonts/openSans/OpenSans-LightItalic.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: openSansRegular;
+    src: url(assets/fonts/openSans/OpenSans-Regular.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: openSansSemiBold;
+    src: url(assets/fonts/openSans/OpenSans-SemiBold.ttf) format("opentype");
+}
+
+@font-face {
+    font-family: openSansSemiBoldItalic;
+    src: url(assets/fonts/openSans/OpenSans-SemiBoldItalic.ttf) format("opentype");
+}
+
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: $font-osr, 'Arial Narrow', Arial, sans-serif;
     font-weight: 300;
     line-height: 1;
-    color: $color-grey-dark-3;
+    color: $color-text-dark;
 }

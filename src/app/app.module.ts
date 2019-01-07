@@ -7,15 +7,33 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 // SERVICES
 import { AuthService } from './shared/guards/auth.service';
-// COMPONENTS
-import { AppComponent } from './app.component';
+import { NotesService } from '@app/components/notes/notes.service';
 // GUARDS
 import { CanDeactivateGuard } from './shared/guards/can-deactivate-guard.service';
 import { AuthGuard } from './shared/guards/auth-guard.service';
+// COMPONENTS
+import { EvaluatedComponent } from './pages/evaluated/evaluated.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { RootComponent } from './root/root.component';
+// PAGES
+import { AppComponent } from './app.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NotesComponent } from './components/notes/notes.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        // PAGES
+        EvaluatedComponent,
+        HomeComponent,
+        PageNotFoundComponent,
+        RootComponent,
+        // COMPONENTS
+        AppComponent,
+        FooterComponent,
+        HeaderComponent,
+        NotesComponent,
     ],
     imports: [
         BrowserModule,
@@ -27,7 +45,8 @@ import { AuthGuard } from './shared/guards/auth-guard.service';
     providers: [
         AuthService,
         CanDeactivateGuard,
-        AuthGuard
+        AuthGuard,
+        NotesService,
     ],
     bootstrap: [AppComponent]
 })

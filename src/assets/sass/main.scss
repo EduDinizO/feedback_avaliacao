@@ -16,12 +16,14 @@
 @import 'layouts/header';
 @import 'layouts/footer';
 @import 'layouts/form';
+@import 'layouts/notes';
 @import 'layouts/sidebar';
 @import 'layouts/navigation';
 // PAGES
 @import 'pages/home';
+@import 'pages/evaluated';
 // THEMES
 @import 'themes/default';
 // VENDORS
 // @import 'vendors/bootstrap';
-@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../../node_modules/bootstrap/scss/bootstrap-grid';

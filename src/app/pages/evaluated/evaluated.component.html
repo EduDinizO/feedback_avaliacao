@@ -1,11 +1,210 @@
 <div class="evaluated">
-    <div class="evaluated__date">
-        avaliação
+    <div class="evaluated__header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 evaluated__date">
+                    AVALIAÇÃO - SET/2018
+                </div>
+            </div>
+        </div>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                bla bla
+        <div class="row py-5">
+            <!--========== DOUGHNUTCHARTS ==========-->
+            <div class="doughnut col-sm-4 col-12 mt-3">
+                <div class="doughnut--small d-flex justify-content-center">
+                    <div class="doughnut__title">
+                            <span class="doughnut__title-finished">
+                                {{finishedEvaluations}}
+                            </span>
+                        <p>avaliações</p>
+                        <p>finalizadas</p>
+                    </div>
+                    <canvas baseChart
+                            [data]="finishedChartData"
+                            [labels]="finishedChartLabels"
+                            [colors]="finishedChartColors"
+                            [legend]="false"
+                            [chartType]="'doughnut'"
+                            [options]="chartOptions"
+                    ></canvas>
+                </div>
+            </div>
+            <div class="doughnut col-sm-4 col-12 mt-3">
+                <div class="doughnut--small d-flex justify-content-center">
+                    <div class="doughnut__title">
+                        <span class="doughnut__title-pending">
+                            {{pendingEvaluations}}
+                        </span>
+                        <p>avaliações</p>
+                        <p>pendentes</p>
+                    </div>
+                    <canvas baseChart
+                            [data]="pendingChartData"
+                            [labels]="pendingChartLabels"
+                            [colors]="pendingChartColors"
+                            [legend]="false"
+                            [chartType]="'doughnut'"
+                            [options]="chartOptions"
+                    ></canvas>
+                </div>
+            </div>
+            <div class="doughnut col-sm-4 col-12 mt-3">
+                <div class="doughnut--small d-flex justify-content-center">
+                    <div class="doughnut__title">
+                        <p>você tem</p>
+                        <span class="doughnut__title-timer">
+                            {{timerHourLabel !== 0 ? timerHourLabel + 'h' : null}}{{timerHourLabel !== 0 ? timerMinuteLabel : timerMinuteLabel + 'min'}}
+                        </span>
+                        <p>para finalizar</p>
+                    </div>
+                    <canvas baseChart
+                            [data]="timerChartData"
+                            [labels]="timerChartLabels"
+                            [colors]="timerChartColors"
+                            [legend]="false"
+                            [chartType]="'doughnut'"
+                            [options]="chartOptions"
+                    ></canvas>
+                </div>
+            </div>
+        </div>
+        <!--========== CARDS ==========-->
+        <div class="row pt-5">
+            <div class="col-md-6 col-12 u__mb-45">
+                <div class="evaluated-card">
+                    <div class="evaluated-card__percentage">
+                        <div class="evaluated-card__percentage-bar">
+                            <div class="evaluated-card__percentage-bar-fill" [ngStyle]="{'width': firstEvaluated + '%', 'background-color': firstEvaluated !== 100 ? '#FDC14A' : '#46BA0B'}"></div>
+                        </div>
+                        <div class="evaluated-card__percentage-value" [ngStyle]="{'color': firstEvaluated === 100 ? '#46BA0B' : '#C5D2DC'}">
+                            0%
+                        </div>
+                    </div>
+                    <div class="evaluated-card__info">
+                        <div class="evaluated-card__info-left">
+                            <img class="evaluated-card__img" src="../../../assets/images/user-2.png"
+                                 alt="Foto do usuário X">
+                        </div>
+                        <div class="evaluated-card__info-right">
+                            <p class="evaluated-card__name">
+                                Eduardo 'Duds' Diniz
+                            </p>
+                            <p class="evaluated-card__role">
+                                A1 - Júnior
+                            </p>
+                            <button class="btn evaluated-card__btn evaluated-card__btn--start">
+                                Iniciar Avaliação
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 u__mb-45">
+                <div class="evaluated-card">
+                    <div class="evaluated-card__percentage">
+                        <div class="evaluated-card__percentage-bar">
+                            <div class="evaluated-card__percentage-bar-fill" [ngStyle]="{'width': secondEvaluated + '%', 'background-color': secondEvaluated !== 100 ? '#FDC14A' : '#46BA0B'}"></div>
+                        </div>
+                        <div class="evaluated-card__percentage-value" [ngStyle]="{'color': secondEvaluated === 100 ? '#46BA0B' : '#C5D2DC'}">
+                            30%
+                        </div>
+                    </div>
+                    <div class="evaluated-card__info">
+                        <div class="evaluated-card__info-left">
+                            <img class="evaluated-card__img" src="../../../assets/images/user-2.png"
+                                 alt="Foto do usuário X">
+                        </div>
+                        <div class="evaluated-card__info-right">
+                            <p class="evaluated-card__name">
+                                Caian 'Peppa' Egidio
+                            </p>
+                            <p class="evaluated-card__role">
+                                A1 - Júnior
+                            </p>
+                            <button class="btn evaluated-card__btn evaluated-card__btn--continue">
+                                Continuar Avaliação
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 u__mb-45">
+                <div class="evaluated-card">
+                    <div class="evaluated-card__percentage">
+                        <div class="evaluated-card__percentage-bar">
+                            <div class="evaluated-card__percentage-bar-fill" [ngStyle]="{'width': thirdEvaluated + '%', 'background-color': thirdEvaluated !== 100 ? '#FDC14A' : '#46BA0B'}"></div>
+                        </div>
+                        <div class="evaluated-card__percentage-value" [ngStyle]="{'color': thirdEvaluated === 100 ? '#46BA0B' : '#C5D2DC'}">
+                            100%
+                        </div>
+                    </div>
+                    <div class="evaluated-card__info">
+                        <div class="evaluated-card__info-left">
+                            <img class="evaluated-card__img" src="../../../assets/images/user-2.png"
+                                 alt="Foto do usuário X">
+                        </div>
+                        <div class="evaluated-card__info-right">
+                            <p class="evaluated-card__name">
+                                Rafael 'Lider' Silvestrini
+                            </p>
+                            <p class="evaluated-card__role">
+                                A2 - Júnior
+                            </p>
+                            <p class="evaluated-card__finished">
+                                Avaliação Concluída <i class="fas fa-check"></i>
+                            </p>
+                            <p class="evaluated-card__schedule">
+                                Agendar Calibragem
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-12 u__mb-45">
+                <div class="evaluated-card">
+                    <div class="evaluated-card__percentage">
+                        <div class="evaluated-card__percentage-bar">
+                            <div class="evaluated-card__percentage-bar-fill" [ngStyle]="{'width': fourthEvaluated + '%', 'background-color': fourthEvaluated !== 100 ? '#FDC14A' : '#46BA0B'}"></div>
+                        </div>
+                        <div class="evaluated-card__percentage-value" [ngStyle]="{'color': fourthEvaluated === 100 ? '#46BA0B' : '#C5D2DC'}">
+                            100%
+                        </div>
+                    </div>
+                    <div class="evaluated-card__info">
+                        <div class="evaluated-card__info-left">
+                            <img class="evaluated-card__img" src="../../../assets/images/user-2.png"
+                                 alt="Foto do usuário X">
+                        </div>
+                        <div class="evaluated-card__info-right">
+                            <p class="evaluated-card__name">
+                                Thiago 'Barney' Freitas
+                            </p>
+                            <p class="evaluated-card__role">
+                                B1 - Pleno
+                            </p>
+                            <p class="evaluated-card__finished">
+                                Avaliação Concluída <i class="fas fa-check"></i>
+                            </p>
+                            <div class="evaluated-card__calibration">
+                                <div class="evaluated-card__calibration-left">
+                                    <i class="far fa-calendar-check"></i>
+                                </div>
+                                <div class="evaluated-card__calibration-right">
+                                    <p class="evaluated-card__calibration-title">
+                                        Calibragem:
+                                    </p>
+                                    <p class="evaluated-card__calibration-date">
+                                        30/03/2019 às 8h30 com Leonidas
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

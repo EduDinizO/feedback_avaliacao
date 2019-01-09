@@ -1,11 +1,11 @@
-<div class="container">
+<div [ngClass]="isCollapsed ? 'container-fluid' : 'container'">
     <div class="row">
-        <div class="header col-12">
+        <div class="header col-12" [ngClass]="isCollapsed ? 'root__margin pr-0 mr-0' : ''">
             <img class="header__logo" src="../../../assets/images/fdte_logo.png" alt="FDTE Logo"/>
             <div class="header__profile">
                 <img class="header__profile-img" src="../../../assets/images/user-1.png" alt="User Avatar">
                 <div class="header__profile-name">
-                    Ariel
+                    Ariel 'Faccioli' Fajtlowicz
                 </div>
                 <button class="btn header__profile-dropdown">
                     <i class="fas fa-angle-down"></i>

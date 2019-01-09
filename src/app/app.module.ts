@@ -21,6 +21,8 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NotesComponent } from './components/notes/notes.component';
+// LIBS
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
     declarations: [
@@ -40,7 +42,8 @@ import { NotesComponent } from './components/notes/notes.component';
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        ChartsModule,
     ],
     providers: [
         AuthService,

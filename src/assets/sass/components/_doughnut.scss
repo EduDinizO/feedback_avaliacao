@@ -1,0 +1,29 @@
+.doughnut {
+    &--small {
+        position: relative;
+    }
+    &__title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: $font-oseb;
+        color: $color-text-dark;
+        font-size: 0.7rem;
+        line-height: 0.9rem;
+        &-finished {
+            color: $color-green;
+             font-size: 1.8rem;
+        }
+        &-pending {
+            color: $color-orange;
+             font-size: 1.8rem;
+        }
+        &-timer {
+            display: inline-block;
+            color: $color-red;
+            font-size: 1.25rem;
+        }
+    }
+}

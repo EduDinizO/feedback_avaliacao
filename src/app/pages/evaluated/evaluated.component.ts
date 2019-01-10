@@ -12,7 +12,16 @@ export class EvaluatedComponent implements OnInit {
     public totalEvaluations: number;
     public chartOptions = {
         cutoutPercentage: 70,
-        responsive: false
+        responsive: false,
+        tooltips: {
+            backgroundColor: '#F9FBFC',
+            titleFontSize: 16,
+            titleFontColor: '#2d2d2d',
+            bodyFontColor: '#2d2d2d',
+            bodyFontSize: 14,
+            displayColors: false,
+            borderWidth: 0
+        }
     };
     // FIRST CHART = FINISHED
     public finishedEvaluations: number;

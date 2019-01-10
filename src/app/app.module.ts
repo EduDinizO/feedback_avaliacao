@@ -28,6 +28,7 @@ import { InputFilterPipe } from '@app/shared/pipes/input-filter.pipe';
 // LIBS
 import { ChartsModule } from 'ng2-charts';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
     declarations: [
@@ -53,6 +54,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
         AppRoutingModule,
         ChartsModule,
         ModalModule.forRoot(),
+        BsDropdownModule.forRoot(),
     ],
     providers: [
         AuthService,

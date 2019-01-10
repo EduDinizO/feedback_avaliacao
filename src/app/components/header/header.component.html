@@ -7,9 +7,19 @@
                 <div class="header__profile-name">
                     Ariel 'Faccioli' Fajtlowicz
                 </div>
-                <button class="header__profile-dropdown">
-                    <i class="fas fa-angle-down"></i>
-                </button>
+                <div class="btn-group" dropdown triggers="hover" #dp="bs-dropdown">
+                    <button id="button-basic" dropdownToggle type="button" class="header__profile-dropdown"
+                            aria-controls="dropdown-basic" (mouseleave)="dp.hide()">
+                        <i class="fas fa-angle-down"></i>
+                    </button>
+                    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+                        role="menu" aria-labelledby="button-basic" (mouseleave)="dp.hide()">
+                        <li role="menuitem"><a class="dropdown-item" routerLink="avaliados">Perfil</a></li>
+                        <li class="divider dropdown-divider"></li>
+                        <li role="menuitem"><a class="dropdown-item" routerLink="avaliados">Avaliados</a>
+                        </li>
+                    </ul>
+                </div>
                 <button *ngIf="!isCollapsed" class="btn btn--open-notes" (click)="toggleNotes()">
                     <i class="far fa-sticky-note"></i>
                 </button>

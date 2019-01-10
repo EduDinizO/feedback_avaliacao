@@ -21,8 +21,13 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NotesComponent } from './components/notes/notes.component';
+// MODALS
+import { ScheduleModalComponent } from '@app/shared/modals/schedule-modal/schedule-modal.components';
+// PIPES
+import { InputFilterPipe } from '@app/shared/pipes/input-filter.pipe';
 // LIBS
 import { ChartsModule } from 'ng2-charts';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
     declarations: [
@@ -36,6 +41,9 @@ import { ChartsModule } from 'ng2-charts';
         FooterComponent,
         HeaderComponent,
         NotesComponent,
+        ScheduleModalComponent,
+        // PIPES
+        InputFilterPipe
     ],
     imports: [
         BrowserModule,
@@ -44,6 +52,7 @@ import { ChartsModule } from 'ng2-charts';
         HttpClientModule,
         AppRoutingModule,
         ChartsModule,
+        ModalModule.forRoot(),
     ],
     providers: [
         AuthService,
@@ -51,7 +60,12 @@ import { ChartsModule } from 'ng2-charts';
         AuthGuard,
         NotesService,
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [
+        AppComponent
+    ],
+    entryComponents: [
+        ScheduleModalComponent
+    ]
 })
 export class AppModule {
 }

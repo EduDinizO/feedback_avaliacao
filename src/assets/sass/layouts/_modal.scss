@@ -1,0 +1,45 @@
+.modal {
+    &-lg {
+        width: 40rem;
+    }
+    &__close {
+        text-align: right;
+    }
+    &__header {
+        &-title {
+            font-family: $font-ossb;
+            font-size: 1.4rem;
+            color: $color-text-dark;
+        }
+        &-img {
+            width: 7.4rem;
+            height: 7.4rem;
+            border-radius: 15rem;
+        }
+        &-name {
+            font-family: $font-osb;
+            font-size: 1.5rem;
+            color: $color-text-dark;
+        }
+        &-role {
+            font-family: $font-ossb;
+            font-size: 1.2rem;
+            color: $color-text-dark;
+        }
+    }
+    &__search {
+        height: 3rem;
+    }
+    &__list {
+        &-img {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 7rem;
+        }
+        &-name {
+            font-family: $font-osb;
+            font-size: 1.1rem;
+            color: $color-text-dark;
+        }
+    }
+}

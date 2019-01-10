@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import * as moment from 'moment';
-import { timer } from 'rxjs';
+import { ScheduleModalComponent } from '@app/shared/modals/schedule-modal/schedule-modal.components';
+import { BsModalService } from 'ngx-bootstrap';
 
 @Component({
     selector: 'app-evaluated',
@@ -33,16 +34,41 @@ export class EvaluatedComponent implements OnInit {
     public timerChartLabels: string[] = ['Tempo Passado', 'Tempo Restante'];
     public timerChartData: number[];
     public timerChartColors = [{ backgroundColor: ['#D8D8D8', '#F1634B'] }];
-    // FIRST EVALUATED
-    public firstEvaluated: number;
-    // SECOND EVALUATED
-    public secondEvaluated: number;
-    // THIRD EVALUATED
-    public thirdEvaluated: number;
-    // FOURTH EVALUATED
-    public fourthEvaluated: number;
 
-    constructor() {
+    public evaluateds = [
+        {
+            percentage: 0,
+            name: 'Eduardo \'Duds\' Diniz',
+            role: 'A1 - Júnior',
+            photo: '../../../assets/images/user-2.png',
+            schedule: false
+        },
+        {
+            percentage: 30,
+            name: 'Caian \'Peppa\' Egidio',
+            role: 'A1 - Júnior',
+            photo: '../../../assets/images/user-2.png',
+            schedule: false
+        },
+        {
+            percentage: 100,
+            name: 'Rafael \'Líder\' Silvestrini',
+            role: 'A2 - Júnior',
+            photo: '../../../assets/images/user-2.png',
+            schedule: false
+        },
+        {
+            percentage: 100,
+            name: 'Thiado \'Barney\' Freitas',
+            role: 'B1 - Pleno',
+            photo: '../../../assets/images/user-2.png',
+            schedule: true
+        }
+    ];
+
+    constructor(
+        private modalService: BsModalService
+    ) {
     }
 
     ngOnInit() {
@@ -64,11 +90,23 @@ export class EvaluatedComponent implements OnInit {
 
         this.timerHourLabel = parseInt((timeRemaining / 3600000).toString(), 10);
         this.timerMinuteLabel = parseInt((timeRemaining / 60000).toString(), 10) - this.timerHourLabel * 60;
+    }
 
-        this.firstEvaluated = 0;
-        this.secondEvaluated = 30;
-        this.thirdEvaluated = 100;
-        this.fourthEvaluated = 100;
+    public openScheduleModal(evaluated: object): void {
+        const bsModalRef = this.modalService.show(ScheduleModalComponent, {
+            initialState: {
+                evaluated: evaluated
+            },
+            animated: true,
+            keyboard: true,
+            class: 'modal-lg'
+        });
+        bsModalRef.content.evaluated = evaluated;
+        bsModalRef.content.onClose.subscribe(result => {
+            if (result.confirm) {
+                console.log(result.evaluated);
+            }
+        });
     }
 
 }

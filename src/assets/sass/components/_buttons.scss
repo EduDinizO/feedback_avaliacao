@@ -1,7 +1,77 @@
-.btn {
+button {
+    font-size: 0.7rem;
     background-color: $color-transparent;
     border-color: transparent;
     &:hover {
         cursor: pointer;
+    }
+}
+
+.btn {
+    &--bordered {
+        text-transform: uppercase;
+        border: 1px solid;
+        border-radius: 0;
+    }
+    &--medium {
+        padding: 0.85rem;
+        font-family: $font-oseb;
+        font-size: 0.7rem;
+    }
+    &--small {
+        padding: 0.5em;
+        font-size: 0.5rem;
+    }
+    &--rounded {
+        border-radius: 3px;
+    }
+    &--blue {
+        border-color: $color-blue;
+        color: $color-blue;
+    }
+    &--orange {
+        border-color: $color-orange;
+        color: $color-orange;
+    }
+    &--underline {
+        font-family: $font-oseb;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: $color-blue;
+        text-decoration: underline;
+    }
+    &--light-blue,
+    &--grey,
+    &--blue-fill,
+    &--orange-fill {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+    &--light-blue {
+        border-color: $color-blue-light;
+        color: $color-blue-light;
+    }
+    &--grey {
+        border-color: $color-grey-dark-2;
+        color: $color-grey-dark-2;
+    }
+    &--blue-fill {
+        border-color: $color-blue;
+        color: $color-white;
+        background-color: $color-blue;
+    }
+    &--orange-fill {
+        border-color: $color-orange;
+        color: $color-white;
+        background-color: $color-orange;
+    }
+    &--close {
+        font-size: 1.2rem;
+        font-family: $font-osb;
+        color: $color-text-dark;
+    }
+    &--schedule {
+
     }
 }

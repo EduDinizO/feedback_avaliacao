@@ -1,0 +1,50 @@
+<div class="modal-body px-4">
+    <div class="modal__close">
+        <button type="button" class="btn btn--close" (click)="onCancel()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="modal__header text-center mb-5">
+        <h5 class="modal__header-title mb-3">
+            Agendar calibragem de
+        </h5>
+        <img class="modal__header-img mb-2" src="{{evaluated.photo}}" alt="Foto do avaliado">
+        <div class="modal__header-name mb-1">
+            {{evaluated.name}}
+        </div>
+        <div class="modal__header-role">
+            {{evaluated.role}}
+        </div>
+    </div>
+    <div class="form-group mb-4">
+        <input class="form-control modal__search" [(ngModel)]="inputFilterEvaluator" type="text"
+               placeholder="Procurar líder">
+    </div>
+    <div *ngFor="let evaluator of evaluators | inputFilter:inputFilterEvaluator:'name'" class="modal__list mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex align-items-center">
+                <img class="modal__list-img mr-3" src="../../../../assets/images/user-1.png" alt="Foto do líder">
+                <div class="modal__list-name">
+                    {{evaluator.name}}
+                </div>
+            </div>
+            <button class="btn btn--bordered btn--blue-fill" (click)="toggleDates(evaluator)">
+                Ver agenda
+            </button>
+        </div>
+        <div *ngIf="evaluator.showDates" class="modal__list-calendar mb-5">
+            <div class="row no-gutters">
+                <div *ngFor="let date of evaluator.dates" class="col-sm-3 col-6 text-center mb-4">
+                    <button class="btn btn--bordered btn--small"
+                            [ngClass]="date.available ? 'btn--light-blue' : 'btn--grey'">{{date.date}}
+                    </button>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <button class="btn btn--bordered btn--orange-fill" (click)="onConfirm()">Agendar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -60,23 +60,7 @@
             font-size: 1.2rem;
             color: $color-text-dark;
         }
-        &__btn {
-            padding: 0.85rem;
-            font-family: $font-oseb;
-            text-transform: uppercase;
-            border-radius: 3px;
-            border: 1px solid;
-            &--start {
-                border-color: $color-blue;
-                color: $color-blue;
-            }
-            &--continue {
-                border-color: $color-orange;
-                color: $color-orange;
-            }
-        }
-        &__finished,
-        &__schedule {
+        &__finished {
             font-family: $font-oseb;
             font-size: 0.7rem;
             text-transform: uppercase;
@@ -88,13 +72,6 @@
             color: $color-green;
             i {
                 margin-left: 0.5rem;
-            }
-        }
-        &__schedule {
-            color: $color-blue;
-            text-decoration: underline;
-            &:hover {
-                cursor: pointer;
             }
         }
         &__calibration {

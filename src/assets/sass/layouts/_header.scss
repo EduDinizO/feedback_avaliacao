@@ -1,9 +1,9 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
 
     &__logo {
+        margin: 1rem 0;
         width: 9.17rem;
         height: 3rem;
     }
@@ -27,10 +27,6 @@
             font-size: 1.3rem;
             color: $color-grey-dark;
             margin-right: 2rem;
-        }
-        &-notes {
-            font-size: 2.4rem;
-            color: $color-orange;
         }
     }
 }

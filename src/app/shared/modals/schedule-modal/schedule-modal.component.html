@@ -36,13 +36,13 @@
             <div class="row no-gutters">
                 <div *ngFor="let date of evaluator.dates" class="col-sm-3 col-6 text-center mb-4">
                     <button class="btn btn--bordered btn--small"
-                            [ngClass]="date.available ? 'btn--light-blue' : 'btn--grey'">{{date.date}}
+                            [ngClass]="date.available ? 'btn--light-blue' : 'btn--light-grey'">{{date.date}}
                     </button>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <button class="btn btn--bordered btn--orange-fill" (click)="onConfirm()">Agendar</button>
+                    <button class="btn btn--bordered btn--medium btn--rounded btn--orange" (click)="onConfirm()">Agendar</button>
                 </div>
             </div>
         </div>

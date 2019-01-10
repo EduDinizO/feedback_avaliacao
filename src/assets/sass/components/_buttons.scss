@@ -8,6 +8,27 @@ button {
 }
 
 .btn {
+    &--open-notes,
+    &--close-notes {
+        font-size: 2.4rem;
+        padding: 0;
+        border-radius: 0;
+    }
+    &--open-notes {
+        color: $color-orange;
+    }
+    &--close-notes {
+        height: 100%;
+        width: 4.5rem;
+        padding-left: 0.5rem;
+        background-color: $color-orange;
+        color: $color-white;
+    }
+    &--grey {
+        padding: 0;
+        font-size: 1.2rem;
+        color: $color-text-dark;
+    }
     &--bordered {
         text-transform: uppercase;
         border: 1px solid;
@@ -41,7 +62,7 @@ button {
         text-decoration: underline;
     }
     &--light-blue,
-    &--grey,
+    &--light-grey,
     &--blue-fill,
     &--orange-fill {
         padding: 0.5rem 1.2rem;
@@ -52,7 +73,7 @@ button {
         border-color: $color-blue-light;
         color: $color-blue-light;
     }
-    &--grey {
+    &--light-grey {
         border-color: $color-grey-dark-2;
         color: $color-grey-dark-2;
     }
@@ -70,8 +91,5 @@ button {
         font-size: 1.2rem;
         font-family: $font-osb;
         color: $color-text-dark;
-    }
-    &--schedule {
-
     }
 }

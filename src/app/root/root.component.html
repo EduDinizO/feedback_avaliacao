@@ -1,11 +1,11 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div [ngClass]="isCollapsed ? 'col px-0' : 'col-12 p-0'">
+        <div [ngClass]="isCollapsed ? 'col px-0' : 'col-12 p-0'" [ngStyle]="{'border-right': isCollapsed ? '7px solid #FDC14A' : null}">
             <app-header></app-header>
             <router-outlet></router-outlet>
             <app-footer></app-footer>
         </div>
-        <div *ngIf="isCollapsed" class="notes">
+        <div *ngIf="isCollapsed" class="w-25">
             <app-notes></app-notes>
         </div>
     </div>

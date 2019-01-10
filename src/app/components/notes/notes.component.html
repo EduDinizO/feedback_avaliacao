@@ -1,34 +1,49 @@
 <div class="notes">
-    <!--========== HEADER ==========-->
-    <div class="notes__header">
-        <div class="notes__header-title">
-            Anotações
-        </div>
-        <div class="notes__header-icon">
-            <i class="fas fa-external-link-alt"></i>
-        </div>
-    </div>
-    <!--========== ACTIONS ==========-->
-    <div class="notes__actions">
-        <div class="notes__create">
-            <div class="notes__create-icon">
-                <i class="fas fa-plus"></i>
+    <div class="notes__absolute">
+        <!--========== HEADER ==========-->
+        <div class="notes__header px-3">
+            <div class="notes__header-title">
+                Anotações
             </div>
-            <div class="notes__create-text">
-                Criar nova anotação
+            <div class="notes__header-icon">
+                <i class="fas fa-external-link-alt"></i>
             </div>
         </div>
-        <div class="notes__filter">
-            <div class="notes__filter-sort">
-                <i class="fas fa-sort-amount-down"></i>
+        <!--========== ACTIONS ==========-->
+        <div class="notes__actions d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center" (click)="createNote()">
+                <button class="notes__create-icon mr-3">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <div class="notes__create-text">
+                    Criar nova anotação
+                </div>
             </div>
-            <div class="notes__filter-search">
-                <i class="fas fa-search"></i>
+            <div class="d-flex align-items-center">
+                <button class="btn btn--grey mr-3">
+                    <i class="fas fa-sort-amount-down"></i>
+                </button>
+                <button class="btn btn--grey">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
         </div>
     </div>
     <!--========== BODY ==========-->
-    <div class="notes__body">
-
+    <div class="notes__body p-3">
+        <div *ngFor="let note of notes" class="notes__card">
+            <div class="notes__card-name">
+                {{note.name}}
+            </div>
+            <div class="notes__card-subject">
+                {{note.subject}}
+            </div>
+            <div class="notes__card-description">
+                {{note.description}}
+            </div>
+            <div class="notes__card-date">
+                {{note.date}}
+            </div>
+        </div>
     </div>
 </div>

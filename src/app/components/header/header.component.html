@@ -10,8 +10,11 @@
                 <button class="header__profile-dropdown">
                     <i class="fas fa-angle-down"></i>
                 </button>
-                <button class="header__profile-notes" (click)="toggleNotes()">
+                <button *ngIf="!isCollapsed" class="btn btn--open-notes" (click)="toggleNotes()">
                     <i class="far fa-sticky-note"></i>
+                </button>
+                <button *ngIf="isCollapsed" class="btn btn--close-notes" (click)="toggleNotes()">
+                    <i class="fas fa-times"></i>
                 </button>
             </div>
         </div>

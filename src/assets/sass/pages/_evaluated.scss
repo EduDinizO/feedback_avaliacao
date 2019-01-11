@@ -1,14 +1,4 @@
 .evaluated {
-    &__header {
-        padding: 1.12rem 0;
-        background-color: $color-grey;
-    }
-    &__date {
-        font-family: $font-oseb;
-        font-size: 1rem;
-        text-transform: uppercase;
-        color: $color-white;
-    }
     &-card {
         padding: 0.85rem 1rem;
         box-shadow: 0.25rem 0.25rem 1.2rem 0 $color-box-shadow;

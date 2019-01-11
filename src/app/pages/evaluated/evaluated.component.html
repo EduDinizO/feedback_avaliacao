@@ -1,8 +1,8 @@
 <div class="evaluated">
-    <div class="evaluated__header">
+    <div class="header__evaluation">
         <div class="container">
             <div class="row">
-                <div class="col-12 evaluated__date">
+                <div class="col-12 header__evaluation-date">
                     AVALIAÇÃO - SET/2018
                 </div>
             </div>
@@ -75,7 +75,7 @@
         <!--========== CARDS ==========-->
         <div class="row pt-3">
             <div *ngFor="let evaluated of evaluateds" class="col-md-6 col-12 u__mb-45">
-                <div class="evaluated-card">
+                <div class="evaluated-card" (click)="loadAssess(evaluated.id)">
                     <div class="evaluated-card__percentage">
                         <div class="evaluated-card__percentage-bar">
                             <div class="evaluated-card__percentage-bar-fill" [ngStyle]="{'width': evaluated.percentage + '%', 'background-color': evaluated.percentage !== 100 ? '#FDC14A' : '#46BA0B'}"></div>

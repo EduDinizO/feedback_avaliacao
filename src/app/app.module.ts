@@ -11,16 +11,12 @@ import { NotesService } from '@app/components/notes/notes.service';
 // GUARDS
 import { CanDeactivateGuard } from './shared/guards/can-deactivate-guard.service';
 import { AuthGuard } from './shared/guards/auth-guard.service';
-// COMPONENTS
+// PAGES
 import { EvaluatedComponent } from './pages/evaluated/evaluated.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { RootComponent } from './root/root.component';
-// PAGES
-import { AppComponent } from './app.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-import { NotesComponent } from './components/notes/notes.component';
+import { AssessComponent } from '@app/pages/assess/assess.component';
 // MODALS
 import { ScheduleModalComponent } from '@app/shared/modals/schedule-modal/schedule-modal.components';
 // PIPES
@@ -29,6 +25,12 @@ import { InputFilterPipe } from '@app/shared/pipes/input-filter.pipe';
 import { ChartsModule } from 'ng2-charts';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+// COMPONENTS
+import { AppComponent } from './app.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NotesComponent } from './components/notes/notes.component';
+import { EvaluationComponent } from './components/evaluation/evaluation.component';
 
 @NgModule({
     declarations: [
@@ -37,14 +39,16 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
         HomeComponent,
         PageNotFoundComponent,
         RootComponent,
+        // PIPES
+        InputFilterPipe,
         // COMPONENTS
         AppComponent,
         FooterComponent,
         HeaderComponent,
         NotesComponent,
         ScheduleModalComponent,
-        // PIPES
-        InputFilterPipe
+        AssessComponent,
+        EvaluationComponent,
     ],
     imports: [
         BrowserModule,

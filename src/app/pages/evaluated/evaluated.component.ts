@@ -2,6 +2,7 @@ import { Component, OnInit, ViewContainerRef } from '@angular/core';
 import * as moment from 'moment';
 import { ScheduleModalComponent } from '@app/shared/modals/schedule-modal/schedule-modal.components';
 import { BsModalService } from 'ngx-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-evaluated',
@@ -46,37 +47,46 @@ export class EvaluatedComponent implements OnInit {
 
     public evaluateds = [
         {
+            id: 1,
             percentage: 0,
             name: 'Eduardo \'Duds\' Diniz',
             role: 'A1 - Júnior',
+            client: 'Gorila',
             photo: '../../../assets/images/user-2.png',
             schedule: false
         },
         {
+            id: 2,
             percentage: 30,
             name: 'Caian \'Peppa\' Egidio',
             role: 'A1 - Júnior',
+            client: 'Gorila',
             photo: '../../../assets/images/user-2.png',
             schedule: false
         },
         {
+            id: 3,
             percentage: 100,
             name: 'Rafael \'Líder\' Silvestrini',
             role: 'A2 - Júnior',
+            client: 'Gorila',
             photo: '../../../assets/images/user-2.png',
             schedule: false
         },
         {
+            id: 4,
             percentage: 100,
             name: 'Thiado \'Barney\' Freitas',
             role: 'B1 - Pleno',
+            client: 'ZenCard',
             photo: '../../../assets/images/user-2.png',
             schedule: true
         }
     ];
 
     constructor(
-        private modalService: BsModalService
+        private modalService: BsModalService,
+        private router: Router,
     ) {
     }
 
@@ -99,6 +109,10 @@ export class EvaluatedComponent implements OnInit {
 
         this.timerHourLabel = parseInt((timeRemaining / 3600000).toString(), 10);
         this.timerMinuteLabel = parseInt((timeRemaining / 60000).toString(), 10) - this.timerHourLabel * 60;
+    }
+
+    public loadAssess(assess: number): void {
+        this.router.navigate(['avaliado', assess]);
     }
 
     public openScheduleModal(evaluated: object): void {

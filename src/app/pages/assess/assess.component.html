@@ -1,0 +1,49 @@
+<div class="assess">
+    <!--========== ASSESS INFO ==========-->
+    <div class="header__assess">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex flex-column justify-content-between">
+                    <div>
+                        <p class="header__assess-name mb-2">
+                            {{assess.name}}
+                        </p>
+                        <p class="header__assess-role">
+                            {{assess.role}} | {{assess.client}}
+                        </p>
+                    </div>
+                    <div class="header__assess-tabs">
+                        <div class="header__assess-tab" [ngClass]="{'header__assess-tab--active' : presentEvaluation}"
+                             (click)="activateTab(1)">
+                            Avaliação atual
+                        </div>
+                        <div class="header__assess-tab" [ngClass]="{'header__assess-tab--active' : pastEvaluation}"
+                             (click)="activateTab(2)">
+                            Avaliações anteriores
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <img src="{{assess.photo}}" alt="" class="header__assess-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--========== EVALUATION INFO ==========-->
+    <div class="header__evaluation">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 header__evaluation-date">
+                    AVALIAÇÃO - SET/2018
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--========== TAB SELECTED ==========-->
+    <div *ngIf="presentEvaluation">
+        <app-evaluation></app-evaluation>
+    </div>
+    <div *ngIf="pastEvaluation">
+
+    </div>
+</div>

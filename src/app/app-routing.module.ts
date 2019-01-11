@@ -7,12 +7,14 @@ import { HomeComponent } from '@app/pages/home/home.component';
 import { PageNotFoundComponent } from '@app/pages/page-not-found/page-not-found.component';
 import { RootComponent } from '@app/root/root.component';
 import { EvaluatedComponent } from '@app/pages/evaluated/evaluated.component';
+import { AssessComponent } from '@app/pages/assess/assess.component';
 
 const routes: Routes = [
     {
         path: '', component: RootComponent, children: [
             { path: 'home', component: HomeComponent },
-            { path: 'avaliados', component: EvaluatedComponent }
+            { path: 'avaliados', component: EvaluatedComponent },
+            { path: 'avaliado/:id', component: AssessComponent }
         ]
     },
     { path: '**', component: PageNotFoundComponent }

@@ -75,7 +75,7 @@
         <!--========== CARDS ==========-->
         <div class="row pt-3">
             <div *ngFor="let evaluated of evaluateds" class="col-md-6 col-12 u__mb-45">
-                <div class="evaluated-card" (click)="loadAssess(evaluated.id)">
+                <div class="evaluated-card">
                     <div class="evaluated-card__percentage">
                         <div class="evaluated-card__percentage-bar">
                             <div class="evaluated-card__percentage-bar-fill" [ngStyle]="{'width': evaluated.percentage + '%', 'background-color': evaluated.percentage !== 100 ? '#FDC14A' : '#46BA0B'}"></div>
@@ -85,15 +85,15 @@
                         </div>
                     </div>
                     <div class="evaluated-card__info">
-                        <div class="evaluated-card__info-left">
+                        <div class="evaluated-card__info-left" (click)="loadAssess(evaluated.id)">
                             <img class="evaluated-card__img" src="{{evaluated.photo}}"
                                  alt="Foto do usuário X">
                         </div>
                         <div class="evaluated-card__info-right">
-                            <p class="evaluated-card__name">
+                            <p class="evaluated-card__name" (click)="loadAssess(evaluated.id)">
                                 {{evaluated.name}}
                             </p>
-                            <p class="evaluated-card__role">
+                            <p class="evaluated-card__role" (click)="loadAssess(evaluated.id)">
                                 {{evaluated.role}}
                             </p>
                             <button *ngIf="evaluated.percentage === 0" class="btn btn--bordered btn--medium btn--rounded btn--blue">

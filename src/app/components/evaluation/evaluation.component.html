@@ -1,3 +1,77 @@
-<p>
-  evaluation works!
-</p>
+<div class="evaluation">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="evaluation__title">
+                    Categorias
+                </p>
+                <div class="evaluation__categories d-flex">
+                    <!--========== TECHNICAL ==========-->
+                    <div class="evaluation__category"
+                         [ngClass]="{'evaluation__category--selected' : staticTabs.tabs[0].active}"
+                         (click)="selectTab(0)">
+                        <div class="evaluation__category-img">
+                            <i class="fas fa-code-branch"
+                               [ngClass]="{'evaluation__category-img--selected' : staticTabs.tabs[0].active}"></i>
+                        </div>
+                        <div>
+                            <div class="evaluation__category-title">
+                                Técnicas
+                            </div>
+                            <div class="evaluation__category-number">
+                                0/7
+                            </div>
+                        </div>
+                    </div>
+                    <!--========== INTERPERSONAL ==========-->
+                    <div class="evaluation__category"
+                         [ngClass]="{'evaluation__category--selected' : staticTabs.tabs[1].active}"
+                         (click)="selectTab(1)">
+                        <div class="evaluation__category-img">
+                            <i class="fas fa-users"
+                               [ngClass]="{'evaluation__category-img--selected' : staticTabs.tabs[1].active}"></i>
+                        </div>
+                        <div>
+                            <div class="evaluation__category-title">
+                                Interpessoais
+                            </div>
+                            <div class="evaluation__category-number">
+                                0/7
+                            </div>
+                        </div>
+                    </div>
+                    <!--========== INTRAPERSONAL ==========-->
+                    <div class="evaluation__category"
+                         [ngClass]="{'evaluation__category--selected' : staticTabs.tabs[2].active}"
+                         (click)="selectTab(2)">
+                        <div class="evaluation__category-img">
+                            <i class="fas fa-user"
+                               [ngClass]="{'evaluation__category-img--selected' : staticTabs.tabs[2].active}"></i>
+                        </div>
+                        <div>
+                            <div class="evaluation__category-title">
+                                Intrapessoais
+                            </div>
+                            <div class="evaluation__category-number">
+                                0/7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <tabset #staticTabs>
+                    <tab>
+                        a
+                    </tab>
+                    <tab>
+                        b
+                    </tab>
+                    <tab>
+                        c
+                    </tab>
+                </tabset>
+            </div>
+        </div>
+    </div>
+</div>
+

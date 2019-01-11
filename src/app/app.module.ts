@@ -25,12 +25,14 @@ import { InputFilterPipe } from '@app/shared/pipes/input-filter.pipe';
 import { ChartsModule } from 'ng2-charts';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 // COMPONENTS
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { EvaluationComponent } from './components/evaluation/evaluation.component';
+import { EvaluationTechnicalComponent } from './components/evaluation-technical/evaluation-technical.component';
 
 @NgModule({
     declarations: [
@@ -49,6 +51,7 @@ import { EvaluationComponent } from './components/evaluation/evaluation.componen
         ScheduleModalComponent,
         AssessComponent,
         EvaluationComponent,
+        EvaluationTechnicalComponent,
     ],
     imports: [
         BrowserModule,
@@ -59,6 +62,7 @@ import { EvaluationComponent } from './components/evaluation/evaluation.componen
         ChartsModule,
         ModalModule.forRoot(),
         BsDropdownModule.forRoot(),
+        TabsModule.forRoot(),
     ],
     providers: [
         AuthService,

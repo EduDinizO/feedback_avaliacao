@@ -29,6 +29,7 @@
             padding: 1.75rem 0 1.15rem 0.9rem;
             &-left {
                 width: 30%;
+                cursor: pointer;
             }
             &-right {
                 width: 70%;
@@ -42,13 +43,13 @@
         &__name {
             font-family: $font-osb;
             font-size: 1.5rem;
-            color: $color-text-dark;
+            cursor: pointer;
         }
         &__role {
             padding: 0.5rem 0 1rem 0;
             font-family: $font-ossb;
             font-size: 1.2rem;
-            color: $color-text-dark;
+            cursor: pointer;
         }
         &__finished {
             font-family: $font-oseb;

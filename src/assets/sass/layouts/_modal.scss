@@ -9,7 +9,6 @@
         &-title {
             font-family: $font-ossb;
             font-size: 1.4rem;
-            color: $color-text-dark;
         }
         &-img {
             width: 7.4rem;
@@ -19,12 +18,10 @@
         &-name {
             font-family: $font-osb;
             font-size: 1.5rem;
-            color: $color-text-dark;
         }
         &-role {
             font-family: $font-ossb;
             font-size: 1.2rem;
-            color: $color-text-dark;
         }
     }
     &__search {
@@ -39,7 +36,6 @@
         &-name {
             font-family: $font-osb;
             font-size: 1.1rem;
-            color: $color-text-dark;
         }
     }
 }

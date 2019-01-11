@@ -1,0 +1,52 @@
+.evaluation {
+    ul.nav.nav-tabs {
+        display: none;
+    }
+
+    &__title {
+        margin-top: 2.2rem;
+        margin-bottom: 0.9rem;
+        font-family: $font-oseb;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    &__category {
+        display: flex;
+        align-items: center;
+        width: 33%;
+        padding: 2rem 1.2rem;
+        background-color: $color-text-dark;
+        color: $color-white;
+        opacity: 0.15;
+        cursor: pointer;
+        &:not(:last-of-type) {
+            margin-right: 1.3rem;
+        }
+        &--selected {
+            background-color: $color-orange;
+            opacity: unset;
+        }
+        &-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            margin-right: 0.7rem;
+            border-radius: 5rem;
+            background-color: $color-white;
+            font-size: 1.5rem;
+            color: $color-text-dark;
+            &--selected {
+                color: $color-orange;
+            }
+        }
+        &-title {
+            font-family: $font-oseb;
+            font-size: 1.1rem;
+        }
+        &-number {
+            font-size: 0.8rem;
+        }
+    }
+}

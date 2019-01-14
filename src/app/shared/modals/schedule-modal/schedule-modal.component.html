@@ -9,12 +9,12 @@
             Agendar calibragem de
         </h5>
         <img class="modal__header-img mb-2" src="{{evaluated.photo}}" alt="Foto do avaliado">
-        <div class="modal__header-name mb-1">
+        <h5 class="modal__header-name mb-1">
             {{evaluated.name}}
-        </div>
-        <div class="modal__header-role">
+        </h5>
+        <h6 class="modal__header-role">
             {{evaluated.role}}
-        </div>
+        </h6>
     </div>
     <div class="form-group mb-4">
         <input class="form-control modal__search" [(ngModel)]="inputFilterEvaluator" type="text"
@@ -24,9 +24,9 @@
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div class="d-flex align-items-center">
                 <img class="modal__list-img mr-3" src="../../../../assets/images/user-1.png" alt="Foto do líder">
-                <div class="modal__list-name">
+                <p class="modal__list-name">
                     {{evaluator.name}}
-                </div>
+                </p>
             </div>
             <button class="btn btn--bordered btn--blue-fill" (click)="toggleDates(evaluator)">
                 Ver agenda

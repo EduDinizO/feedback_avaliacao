@@ -2,9 +2,9 @@
     <div class="notes__absolute">
         <!--========== HEADER ==========-->
         <div class="notes__header px-3">
-            <div class="notes__header-title">
+            <h6 class="notes__header-title">
                 Anotações
-            </div>
+            </h6>
             <div class="notes__header-icon">
                 <i class="fas fa-external-link-alt"></i>
             </div>
@@ -15,9 +15,9 @@
                 <button class="notes__create-icon mr-3">
                     <i class="fas fa-plus"></i>
                 </button>
-                <div class="notes__create-text">
+                <h5 class="notes__create-text">
                     Criar nova anotação
-                </div>
+                </h5>
             </div>
             <div class="d-flex align-items-center">
                 <button class="btn btn--grey mr-3">
@@ -32,15 +32,15 @@
     <!--========== BODY ==========-->
     <div class="notes__body p-3">
         <div *ngFor="let note of notes" class="notes__card">
-            <div class="notes__card-name">
+            <h5 class="notes__card-name">
                 {{note.name}}
-            </div>
-            <div class="notes__card-subject">
+            </h5>
+            <h6 class="notes__card-subject">
                 {{note.subject}}
-            </div>
-            <div class="notes__card-description">
+            </h6>
+            <p class="notes__card-description">
                 {{note.description}}
-            </div>
+            </p>
             <div class="notes__card-date">
                 {{note.date}}
             </div>

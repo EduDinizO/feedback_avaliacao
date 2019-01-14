@@ -2,7 +2,32 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-12">
-                .evaluation__
+                <div class="evaluation__box">
+                    <h6 class="evaluation__box-title">
+
+                    </h6>
+                    <div class="evaluation__box-content">
+                        <div class="doughnut">
+                            <div class="doughnut--small d-flex justify-content-center">
+                                <div class="doughnut__title">
+                            <span class="doughnut__title-finished">
+                                {{finishedEvaluations}}
+                            </span>
+                                    <p>performance</p>
+                                </div>
+                                <canvas baseChart
+                                        [data]="finishedChartData"
+                                        [labels]="finishedChartLabels"
+                                        [colors]="finishedChartColors"
+                                        [legend]="false"
+                                        [chartType]="'doughnut'"
+                                        [options]="chartOptions"
+                                        style="z-index: 2"
+                                ></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

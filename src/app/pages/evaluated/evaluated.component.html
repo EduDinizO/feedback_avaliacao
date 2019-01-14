@@ -2,9 +2,9 @@
     <div class="header__evaluation">
         <div class="container">
             <div class="row">
-                <div class="col-12 header__evaluation-date">
+                <h6 class="col-12 header__evaluation-date">
                     AVALIAÇÃO - SET/2018
-                </div>
+                </h6>
             </div>
         </div>
     </div>
@@ -90,12 +90,12 @@
                                  alt="Foto do usuário X">
                         </div>
                         <div class="evaluated-card__info-right">
-                            <p class="evaluated-card__name" (click)="loadAssess(evaluated.id)">
+                            <h5 class="evaluated-card__name" (click)="loadAssess(evaluated.id)">
                                 {{evaluated.name}}
-                            </p>
-                            <p class="evaluated-card__role" (click)="loadAssess(evaluated.id)">
+                            </h5>
+                            <h6 class="evaluated-card__role" (click)="loadAssess(evaluated.id)">
                                 {{evaluated.role}}
-                            </p>
+                            </h6>
                             <button *ngIf="evaluated.percentage === 0" class="btn btn--bordered btn--medium btn--rounded btn--blue">
                                 Iniciar Avaliação
                             </button>

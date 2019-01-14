@@ -5,12 +5,12 @@
             <div class="row">
                 <div class="col d-flex flex-column justify-content-between">
                     <div>
-                        <p class="header__assess-name mb-2">
+                        <h3 class="header__assess-name mb-2">
                             {{assess.name}}
-                        </p>
-                        <p class="header__assess-role">
+                        </h3>
+                        <h6 class="header__assess-role">
                             {{assess.role}} | {{assess.client}}
-                        </p>
+                        </h6>
                     </div>
                     <div class="header__assess-tabs">
                         <div class="header__assess-tab" [ngClass]="{'header__assess-tab--active' : presentEvaluation}"
@@ -33,9 +33,9 @@
     <div class="header__evaluation">
         <div class="container">
             <div class="row">
-                <div class="col-12 header__evaluation-date">
+                <h6 class="col-12 header__evaluation-date">
                     AVALIAÇÃO - SET/2018
-                </div>
+                </h6>
             </div>
         </div>
     </div>

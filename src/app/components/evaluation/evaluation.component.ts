@@ -10,8 +10,20 @@ export class EvaluationComponent implements OnInit {
     @ViewChild('staticTabs') staticTabs: TabsetComponent;
 
     public evaluation = {
-        performance: 4.72,
-        potential: 2.25,
+        id: 1,
+        createdAt: new Date().getTime(),
+        auto: {
+            performance: 4.72,
+            potential: 2.25,
+        },
+        leader: {
+            performance: 0,
+            potential: 0
+        },
+        calibrate: {
+            performance: 3.72,
+            potential: 2.25,
+        },
         technicals: [
             {
                 id: 1,

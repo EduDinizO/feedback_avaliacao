@@ -5,7 +5,7 @@
                 <p class="evaluation__title">
                     Categorias
                 </p>
-                <div class="evaluation__categories d-flex">
+                <div class="evaluation__categories d-flex mb-5">
                     <!--========== TECHNICAL ==========-->
                     <div class="evaluation__category"
                          [ngClass]="{'evaluation__category--selected' : staticTabs.tabs[0].active}"
@@ -61,7 +61,54 @@
 
                 <tabset #staticTabs>
                     <tab>
-                        a
+                        <p class="evaluation__title">
+                            Habilidades
+                        </p>
+                        <div *ngFor="let technical of evaluation.technicals" class="evaluation__card">
+                            <div class="evaluation__card-left">
+                                <h6 class="evaluation__card-title">
+                                    {{technical.title}}
+                                </h6>
+                                <p class="evaluation__card-description">
+                                    {{technical.description}}
+                                </p>
+                            </div>
+                            <div class="evaluation__card-right">
+                                <div class="evaluation__card-score">
+                                    <h6>auto</h6>
+                                    <p [ngStyle]="{'color':
+                                        technical.autoScore === 0 ? '#A0B0C0':
+                                        technical.autoScore === 3 ? '#FDC14A':
+                                        technical.autoScore >= 4 ? '#46BA0B':
+                                        '#F1634B'
+                                    }">
+                                        {{technical.autoScore}}
+                                    </p>
+                                </div>
+                                <div class="evaluation__card-score">
+                                    <h6>líder</h6>
+                                    <p [ngStyle]="{'color':
+                                        technical.leaderScore === 0 ? '#A0B0C0':
+                                        technical.leaderScore === 3 ? '#FDC14A':
+                                        technical.leaderScore >= 4 ? '#46BA0B':
+                                        '#F1634B'
+                                    }">
+                                        {{technical.leaderScore}}
+                                    </p>
+                                </div>
+                                <div class="evaluation__card-score">
+                                    <h6>calibrada</h6>
+                                    <p [ngStyle]="{'color':
+                                        technical.calibrateScore === 0 ? '#A0B0C0':
+                                        technical.calibrateScore === 3 ? '#FDC14A':
+                                        technical.calibrateScore >= 4 ? '#46BA0B':
+                                        '#F1634B'
+                                    }">
+                                        {{technical.calibrateScore}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </tab>
                     <tab>
                         b

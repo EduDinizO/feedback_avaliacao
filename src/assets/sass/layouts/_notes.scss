@@ -31,7 +31,7 @@
     &__create {
         &-icon {
             font-size: 1.2rem;
-            color: $color-orange;
+            color: $color-yellow;
         }
         &-text {
             font-family: $font-ossb;
@@ -52,11 +52,11 @@
         }
         /* Handle */
         &::-webkit-scrollbar-thumb {
-            background: $color-orange;
+            background: $color-yellow;
         }
         /* Handle on hover */
         &::-webkit-scrollbar-thumb:hover {
-            background: darken($color-orange, 20%);
+            background: darken($color-yellow, 20%);
         }
     }
     &__card {

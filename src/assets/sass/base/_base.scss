@@ -73,10 +73,10 @@ html {
     }
     /* Handle */
     &::-webkit-scrollbar-thumb {
-        background: $color-orange;
+        background: $color-yellow;
     }
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-        background: darken($color-orange, 20%);
+        background: darken($color-yellow, 20%);
     }
 }

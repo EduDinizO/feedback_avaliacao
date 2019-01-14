@@ -32,7 +32,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { EvaluationComponent } from './components/evaluation/evaluation.component';
-import { EvaluationTechnicalComponent } from './components/evaluation-technical/evaluation-technical.component';
+import { EvaluationOldComponent } from './components/evaluation-old/evaluation-old.component';
 
 @NgModule({
     declarations: [
@@ -51,7 +51,7 @@ import { EvaluationTechnicalComponent } from './components/evaluation-technical/
         ScheduleModalComponent,
         AssessComponent,
         EvaluationComponent,
-        EvaluationTechnicalComponent,
+        EvaluationOldComponent,
     ],
     imports: [
         BrowserModule,

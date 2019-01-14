@@ -14,9 +14,9 @@
             <div class="doughnut col-sm-4 col-12 mt-3">
                 <div class="doughnut--small d-flex justify-content-center">
                     <div class="doughnut__title">
-                            <span class="doughnut__title-finished">
-                                {{finishedEvaluations}}
-                            </span>
+                        <span class="doughnut__title--green">
+                            {{finishedEvaluations}}
+                        </span>
                         <p>avaliações</p>
                         <p>finalizadas</p>
                     </div>
@@ -34,7 +34,7 @@
             <div class="doughnut col-sm-4 col-12 mt-3">
                 <div class="doughnut--small d-flex justify-content-center">
                     <div class="doughnut__title">
-                        <span class="doughnut__title-pending">
+                        <span class="doughnut__title--yellow">
                             {{pendingEvaluations}}
                         </span>
                         <p>avaliações</p>
@@ -55,7 +55,7 @@
                 <div class="doughnut--small d-flex justify-content-center">
                     <div class="doughnut__title">
                         <p>você tem</p>
-                        <span class="doughnut__title-timer">
+                        <span class="doughnut__title--red">
                             {{timerHourLabel !== 0 ? timerHourLabel + 'h' : null}}{{timerHourLabel !== 0 ? timerMinuteLabel : timerMinuteLabel + 'min'}}
                         </span>
                         <p>para finalizar</p>
@@ -78,9 +78,11 @@
                 <div class="evaluated-card">
                     <div class="evaluated-card__percentage">
                         <div class="evaluated-card__percentage-bar">
-                            <div class="evaluated-card__percentage-bar-fill" [ngStyle]="{'width': evaluated.percentage + '%', 'background-color': evaluated.percentage !== 100 ? '#FDC14A' : '#46BA0B'}"></div>
+                            <div class="evaluated-card__percentage-bar-fill"
+                                 [ngStyle]="{'width': evaluated.percentage + '%', 'background-color': evaluated.percentage !== 100 ? '#FDC14A' : '#46BA0B'}"></div>
                         </div>
-                        <div class="evaluated-card__percentage-value" [ngStyle]="{'color': evaluated.percentage === 100 ? '#46BA0B' : '#C5D2DC'}">
+                        <div class="evaluated-card__percentage-value"
+                             [ngStyle]="{'color': evaluated.percentage === 100 ? '#46BA0B' : '#C5D2DC'}">
                             {{evaluated.percentage}}%
                         </div>
                     </div>
@@ -96,19 +98,23 @@
                             <h6 class="evaluated-card__role" (click)="loadAssess(evaluated.id)">
                                 {{evaluated.role}}
                             </h6>
-                            <button *ngIf="evaluated.percentage === 0" class="btn btn--bordered btn--medium btn--rounded btn--blue">
+                            <button *ngIf="evaluated.percentage === 0"
+                                    class="btn btn--bordered btn--medium btn--rounded btn--blue">
                                 Iniciar Avaliação
                             </button>
-                            <button *ngIf="evaluated.percentage > 0 && evaluated.percentage < 100" class="btn btn--bordered btn--medium btn--rounded btn--orange">
+                            <button *ngIf="evaluated.percentage > 0 && evaluated.percentage < 100"
+                                    class="btn btn--bordered btn--medium btn--rounded btn--orange">
                                 Continuar Avaliação
                             </button>
                             <p *ngIf="evaluated.percentage === 100" class="evaluated-card__finished">
                                 Avaliação Concluída <i class="fas fa-check"></i>
                             </p>
-                            <button *ngIf="evaluated.percentage === 100 && !evaluated.schedule" class="btn btn--underline p-0" (click)="openScheduleModal(evaluated)">
+                            <button *ngIf="evaluated.percentage === 100 && !evaluated.schedule"
+                                    class="btn btn--underline p-0" (click)="openScheduleModal(evaluated)">
                                 Agendar Calibragem
                             </button>
-                            <div *ngIf="evaluated.percentage === 100 && evaluated.schedule" class="evaluated-card__calibration">
+                            <div *ngIf="evaluated.percentage === 100 && evaluated.schedule"
+                                 class="evaluated-card__calibration">
                                 <div class="evaluated-card__calibration-left">
                                     <i class="far fa-calendar-check"></i>
                                 </div>

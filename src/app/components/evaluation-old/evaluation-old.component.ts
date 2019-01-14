@@ -6,6 +6,25 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./evaluation-old.component.scss']
 })
 export class EvaluationOldComponent implements OnInit {
+    public chartLabels: string[] = ['Pontuação atingida', 'Pontuação restante'];
+    public positiveChartColors = [{ backgroundColor: ['#46BA0B', '#D8D8D8'] }];
+    public centerChartColors = [{ backgroundColor: ['#FDC14A', '#D8D8D8'] }];
+    public negativeChartColors = [{ backgroundColor: ['#D8D8D8', '#F1634B'] }];
+
+    public chartOptions = {
+        cutoutPercentage: 70,
+        responsive: false,
+        tooltips: {
+            backgroundColor: '#F9FBFC',
+            titleFontSize: 16,
+            titleFontColor: '#2d2d2d',
+            bodyFontColor: '#2d2d2d',
+            bodyFontSize: 14,
+            displayColors: false,
+            borderWidth: 0
+        }
+    };
+
     public evaluations = [
         {
             id: 1,

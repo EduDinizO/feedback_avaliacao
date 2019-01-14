@@ -12,18 +12,22 @@
         color: $color-text-dark;
         font-size: 0.7rem;
         line-height: 0.9rem;
-        &-finished {
+        &--green {
             color: $color-green;
-             font-size: 1.8rem;
+            font-size: 1.8rem;
         }
-        &-pending {
+        &--yellow {
             color: $color-yellow;
-             font-size: 1.8rem;
+            font-size: 1.8rem;
         }
-        &-timer {
+        &--red {
             display: inline-block;
             color: $color-red;
             font-size: 1.25rem;
+        }
+        &--low {
+            color: $color-red;
+            font-size: 1.8rem;
         }
     }
 }

@@ -80,3 +80,8 @@ html {
         background: darken($color-yellow, 20%);
     }
 }
+
+.root__height {
+    height: calc(100vh - 9.7rem);
+    overflow-y: auto;
+}

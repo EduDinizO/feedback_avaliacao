@@ -10,6 +10,7 @@ import { EvaluatedComponent } from '@app/pages/evaluated/evaluated.component';
 import { AssessComponent } from '@app/pages/assess/assess.component';
 import { EvaluationOldComponent } from '@app/components/evaluation-old/evaluation-old.component';
 import { EvaluationsOldsComponent } from '@app/components/evaluations-olds/evaluations-olds.component';
+import { EvaluationCalibrationComponent } from '@app/components/evaluation-calibration/evaluation-calibration.component';
 
 const routes: Routes = [
     {
@@ -19,7 +20,8 @@ const routes: Routes = [
             {
                 path: 'avaliado/:id', component: AssessComponent, children: [
                     { path: 'avaliacao/:id', component: EvaluationOldComponent },
-                    { path: 'avaliacoes', component: EvaluationsOldsComponent}
+                    { path: 'avaliacoes', component: EvaluationsOldsComponent },
+                    { path: 'avaliacao/:id/calibragem', component: EvaluationCalibrationComponent }
                 ]
             },
         ]

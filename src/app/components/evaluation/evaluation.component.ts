@@ -20,7 +20,7 @@ export class EvaluationComponent implements OnInit {
             performance: 0,
             potential: 0
         },
-        calibrate: {
+        calibrated: {
             performance: 3.72,
             potential: 2.25,
         },
@@ -31,7 +31,7 @@ export class EvaluationComponent implements OnInit {
                 description: 'Demonstrou capacidade do entendimento do problema, sem afobação e evitou retrabalho por falha de escopo.',
                 autoScore: 3,
                 leaderScore: 5,
-                calibrateScore: 4,
+                calibratedScore: 4,
                 comment: 'comentário 1'
             },
             {
@@ -40,7 +40,7 @@ export class EvaluationComponent implements OnInit {
                 description: 'Utilizou as melhores práticas na execução do trabalho técnico, produzindo uma entrega coerente com a demanda e de fácil manutenção.',
                 autoScore: 4,
                 leaderScore: 3,
-                calibrateScore: 3,
+                calibratedScore: 3,
                 comment: ''
             },
             {
@@ -49,7 +49,7 @@ export class EvaluationComponent implements OnInit {
                 description: 'Compreende e propõe soluções envolvendo múltiplas partes e sistemas, avaliando o acomplamento entre elas em termos técnicos e de negócio.',
                 autoScore: 0,
                 leaderScore: 2,
-                calibrateScore: 2,
+                calibratedScore: 2,
                 comment: 'comentário 3'
             },
             {
@@ -58,7 +58,7 @@ export class EvaluationComponent implements OnInit {
                 description: 'Capacidade de antever o esforço e prazo de suas atividades e daquelas desempenhadas pelo time.',
                 autoScore: 2,
                 leaderScore: 3,
-                calibrateScore: 3,
+                calibratedScore: 3,
                 comment: 'comentário 4'
             },
             {
@@ -67,7 +67,7 @@ export class EvaluationComponent implements OnInit {
                 description: 'Realiza o mapeamento de domínios reais para modelos capazes de expressar com complexidade adequada ao objeto em desenvolvimento.',
                 autoScore: 0,
                 leaderScore: 3,
-                calibrateScore: 3,
+                calibratedScore: 3,
                 comment: 'comentário 5'
             },
             {
@@ -76,7 +76,7 @@ export class EvaluationComponent implements OnInit {
                 description: 'Demonstra maestria sobre seu ambiente de desenvolvimento, ferramental e versionamento, em especial na colaboração em time.',
                 autoScore: 4,
                 leaderScore: 4,
-                calibrateScore: 4,
+                calibratedScore: 4,
                 comment: 'comentário 6'
             },
             {
@@ -85,7 +85,7 @@ export class EvaluationComponent implements OnInit {
                 description: 'Mantém o time, seus pares e coordenadores, atualizados do estado de suas tarefas e dificuldades pelo caminho.',
                 autoScore: 3,
                 leaderScore: 2,
-                calibrateScore: 2,
+                calibratedScore: 2,
                 comment: 'comentário 7'
             }
         ],
@@ -96,7 +96,7 @@ export class EvaluationComponent implements OnInit {
                 description: 'Demonstrou capacidade do entendimento do problema, sem afobação e evitou retrabalho por falha de escopo.',
                 autoScore: 3,
                 leaderScore: 5,
-                calibrateScore: 4,
+                calibratedScore: 4,
                 comment: 'comentário 8'
             }
         ],
@@ -107,7 +107,7 @@ export class EvaluationComponent implements OnInit {
                 description: 'Demonstrou capacidade do entendimento do problema, sem afobação e evitou retrabalho por falha de escopo.',
                 autoScore: 3,
                 leaderScore: 5,
-                calibrateScore: 4,
+                calibratedScore: 4,
                 comment: 'comentário 9'
             }
         ]
@@ -121,6 +121,10 @@ export class EvaluationComponent implements OnInit {
 
     selectTab(tabId: number) {
         this.staticTabs.tabs[tabId].active = true;
+    }
+
+    public save(): void {
+
     }
 
 }

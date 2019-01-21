@@ -79,3 +79,16 @@
         }
     }
 }
+
+.subheader {
+    padding: 1.75rem 0 0.75rem 0;
+    background-color: $color-grey-light-1;
+    &__title {
+        font-family: $font-osb;
+        font-size: 1.1rem;
+    }
+    &__text {
+        font-family: $font-osb;
+        font-size: 1.8rem;
+    }
+}

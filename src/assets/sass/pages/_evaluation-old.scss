@@ -1,3 +1,10 @@
-.evaluation {
-
+.evaluation-old {
+    &__doughnut {
+        &-title {
+            margin: 2.1rem 0 2rem 0;
+            font-family: $font-osb;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
 }

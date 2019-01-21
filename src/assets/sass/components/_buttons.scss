@@ -1,7 +1,7 @@
 button {
     font-size: 0.7rem;
     background-color: $color-transparent;
-    border-color: transparent;
+    border: unset;
     &:hover {
         cursor: pointer;
     }
@@ -34,6 +34,10 @@ button {
         border: 1px solid;
         border-radius: 0;
     }
+    &--big {
+        font-size: 1.5rem !important;
+        padding: 1rem 3rem !important;
+    }
     &--medium {
         padding: 0.85rem;
         font-family: $font-oseb;
@@ -50,7 +54,7 @@ button {
         border-color: $color-blue;
         color: $color-blue;
     }
-    &--orange {
+    &--yellow {
         border-color: $color-yellow;
         color: $color-yellow;
     }
@@ -64,7 +68,7 @@ button {
     &--light-blue,
     &--light-grey,
     &--blue-fill,
-    &--orange-fill {
+    &--yellow-fill {
         padding: 0.5rem 1.2rem;
         font-size: 0.8rem;
         text-transform: uppercase;
@@ -82,7 +86,7 @@ button {
         color: $color-white;
         background-color: $color-blue;
     }
-    &--orange-fill {
+    &--yellow-fill {
         border-color: $color-yellow;
         color: $color-white;
         background-color: $color-yellow;

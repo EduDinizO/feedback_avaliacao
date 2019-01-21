@@ -7,13 +7,167 @@
         </div>
     </div>
 </div>
+<div class="subheader">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-6">
+                <h6 class="subheader__title mb-1">
+                    CARGO:
+                </h6>
+                <h5 class="subheader__text mb-3">
+                    Estagiário
+                </h5>
+            </div>
+            <div class="col-lg-3 col-6">
+                <h6 class="subheader__title mb-1">
+                    PROJETO:
+                </h6>
+                <h5 class="subheader__text mb-3">
+                    Gorila App
+                </h5>
+            </div>
+            <div class="col-lg-3 col-6">
+                <h6 class="subheader__title mb-1">
+                    LÍDER:
+                </h6>
+                <h5 class="subheader__text mb-3">
+                    Felps
+                </h5>
+            </div>
+            <div class="col-lg-3 col-6">
+                <h6 class="subheader__title mb-1">
+                    CALIBRAGEM:
+                </h6>
+                <h5 class="subheader__text mb-3">
+                    Leonidas
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="evaluation">
     <div class="container">
         <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5 col-md-6 col-12">
+                <h6 class="evaluation-old__doughnut-title text-center">
+                    Auto
+                </h6>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="doughnut--small d-flex justify-content-center mr-5 w-25">
+                        <div class="doughnut__title">
+                                <span [ngClass]="
+                                        evaluation.auto.performance < 3 ? 'doughnut__title--low' :
+                                        evaluation.auto.performance >= 3 && evaluation.auto.performance < 4 ? 'doughnut__title--yellow' :
+                                        evaluation.auto.performance >= 4 ? 'doughnut__title--green' : ''"
+                                >
+                                    {{evaluation.auto.performance}}
+                                </span>
+                            <p>performance</p>
+                        </div>
+                        <canvas baseChart
+                                [data]="[evaluation.auto.performance, 5 - evaluation.auto.performance]"
+                                [labels]="chartLabels"
+                                [colors]="
+                                            evaluation.auto.performance < 3 ? negativeChartColors :
+                                            evaluation.auto.performance >= 3 && evaluation.auto.performance < 4 ? centerChartColors :
+                                            evaluation.auto.performance >= 4 ? positiveChartColors : ''
+                                        "
+                                [legend]="false"
+                                [chartType]="'doughnut'"
+                                [options]="chartOptions"
+                                style="z-index: 2"
+                        ></canvas>
+                    </div>
+                    <div class="doughnut--small d-flex justify-content-center w-25">
+                        <div class="doughnut__title">
+                                <span [ngClass]="
+                                        evaluation.auto.potential < 3 ? 'doughnut__title--low' :
+                                        evaluation.auto.potential >= 3 && evaluation.auto.potential < 4 ? 'doughnut__title--yellow' :
+                                        evaluation.auto.potential >= 4 ? 'doughnut__title--green' : ''"
+                                >
+                                    {{evaluation.auto.potential}}
+                                </span>
+                            <p>potencial</p>
+                        </div>
+                        <canvas baseChart
+                                [data]="[evaluation.auto.potential, 5 - evaluation.auto.potential]"
+                                [labels]="chartLabels"
+                                [colors]="
+                                            evaluation.auto.potential < 3 ? negativeChartColors :
+                                            evaluation.auto.potential >= 3 && evaluation.auto.potential < 4 ? centerChartColors :
+                                            evaluation.auto.potential >= 4 ? positiveChartColors : ''
+                                        "
+                                [legend]="false"
+                                [chartType]="'doughnut'"
+                                [options]="chartOptions"
+                                style="z-index: 2"
+                        ></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6 col-12">
+                <h6 class="evaluation-old__doughnut-title text-center">
+                    FDTE
+                </h6>
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="doughnut--small d-flex justify-content-center mr-5 w-25">
+                        <div class="doughnut__title">
+                            <span [ngClass]="
+                                    evaluation.calibrated.performance < 3 ? 'doughnut__title--low' :
+                                    evaluation.calibrated.performance >= 3 && evaluation.calibrated.performance < 4 ? 'doughnut__title--yellow' :
+                                    evaluation.calibrated.performance >= 4 ? 'doughnut__title--green' : ''"
+                            >
+                                {{evaluation.calibrated.performance}}
+                            </span>
+                            <p>performance</p>
+                        </div>
+                        <canvas baseChart
+                                [data]="[evaluation.calibrated.performance, 5 - evaluation.calibrated.performance]"
+                                [labels]="chartLabels"
+                                [colors]="
+                                        evaluation.calibrated.performance < 3 ? negativeChartColors :
+                                        evaluation.calibrated.performance >= 3 && evaluation.calibrated.performance < 4 ? centerChartColors :
+                                        evaluation.calibrated.performance >= 4 ? positiveChartColors : ''
+                                    "
+                                [legend]="false"
+                                [chartType]="'doughnut'"
+                                [options]="chartOptions"
+                                style="z-index: 2"
+                        ></canvas>
+                    </div>
+                    <div class="doughnut--small d-flex justify-content-center w-25">
+                        <div class="doughnut__title">
+                            <span [ngClass]="
+                                    evaluation.calibrated.potential < 3 ? 'doughnut__title--low' :
+                                    evaluation.calibrated.potential >= 3 && evaluation.calibrated.potential < 4 ? 'doughnut__title--yellow' :
+                                    evaluation.calibrated.potential >= 4 ? 'doughnut__title--green' : ''"
+                            >
+                                {{evaluation.calibrated.potential}}
+                            </span>
+                            <p>potencial</p>
+                        </div>
+                        <canvas baseChart
+                                [data]="[evaluation.calibrated.potential, 5 - evaluation.calibrated.potential]"
+                                [labels]="chartLabels"
+                                [colors]="
+                                        evaluation.calibrated.potential < 3 ? negativeChartColors :
+                                        evaluation.calibrated.potential >= 3 && evaluation.calibrated.potential < 4 ? centerChartColors :
+                                        evaluation.calibrated.potential >= 4 ? positiveChartColors : ''
+                                    "
+                                [legend]="false"
+                                [chartType]="'doughnut'"
+                                [options]="chartOptions"
+                                style="z-index: 2"
+                        ></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
             <div class="col-12">
-                <p class="evaluation__title">
+                <h6 class="evaluation__title">
                     Categorias
-                </p>
+                </h6>
                 <div class="evaluation__categories d-flex mb-5">
                     <!--========== TECHNICAL ==========-->
                     <div class="evaluation__category"
@@ -24,12 +178,12 @@
                                [ngClass]="{'evaluation__category-img--selected' : staticTabs.tabs[0].active}"></i>
                         </div>
                         <div>
-                            <div class="evaluation__category-title">
+                            <h6 class="evaluation__category-title">
                                 Técnicas
-                            </div>
-                            <div class="evaluation__category-number">
+                            </h6>
+                            <p class="evaluation__category-number">
                                 0/7
-                            </div>
+                            </p>
                         </div>
                     </div>
                     <!--========== INTERPERSONAL ==========-->
@@ -41,12 +195,12 @@
                                [ngClass]="{'evaluation__category-img--selected' : staticTabs.tabs[1].active}"></i>
                         </div>
                         <div>
-                            <div class="evaluation__category-title">
+                            <h6 class="evaluation__category-title">
                                 Interpessoais
-                            </div>
-                            <div class="evaluation__category-number">
+                            </h6>
+                            <p class="evaluation__category-number">
                                 0/7
-                            </div>
+                            </p>
                         </div>
                     </div>
                     <!--========== INTRAPERSONAL ==========-->
@@ -58,12 +212,12 @@
                                [ngClass]="{'evaluation__category-img--selected' : staticTabs.tabs[2].active}"></i>
                         </div>
                         <div>
-                            <div class="evaluation__category-title">
+                            <h6 class="evaluation__category-title">
                                 Intrapessoais
-                            </div>
-                            <div class="evaluation__category-number">
+                            </h6>
+                            <p class="evaluation__category-number">
                                 0/7
-                            </div>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -85,7 +239,8 @@
                             <ng-template #pop>
                                 <input class="input__popover" type="text" title="" [(ngModel)]="technical.comment">
                             </ng-template>
-                            <div class="d-flex align-items-center" [popover]="pop" [outsideClick]="true" placement="bottom" triggers="mouseenter:mouseleave">
+                            <div class="d-flex align-items-center" [popover]="pop" [outsideClick]="true"
+                                 placement="bottom" triggers="mouseenter:mouseleave">
                                 <div class="evaluation__card-score">
                                     <h6>auto</h6>
                                     <p [ngStyle]="{'color':
@@ -111,12 +266,12 @@
                                 <div class="evaluation__card-score">
                                     <h6>calibrada</h6>
                                     <p [ngStyle]="{'color':
-                                        technical.calibrateScore === 0 ? '#A0B0C0':
-                                        technical.calibrateScore === 3 ? '#FDC14A':
-                                        technical.calibrateScore >= 4 ? '#46BA0B':
+                                        technical.calibratedScore === 0 ? '#A0B0C0':
+                                        technical.calibratedScore === 3 ? '#FDC14A':
+                                        technical.calibratedScore >= 4 ? '#46BA0B':
                                         '#F1634B'
                                     }">
-                                        {{technical.calibrateScore}}
+                                        {{technical.calibratedScore}}
                                     </p>
                                 </div>
                             </div>

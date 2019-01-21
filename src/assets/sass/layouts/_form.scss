@@ -5,4 +5,11 @@
         font-size: 0.8rem;
         color: $color-black;
     }
+    &__calibrated {
+        border: unset;
+        font-family: $font-oseb;
+        font-size: 1.6rem;
+        width: 2rem;
+        height: 1.65rem;
+    }
 }

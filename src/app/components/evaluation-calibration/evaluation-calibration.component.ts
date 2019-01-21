@@ -1,32 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { TabsetComponent } from 'ngx-bootstrap';
 
 @Component({
-    selector: 'app-evaluation-old',
-    templateUrl: './evaluation-old.component.html',
-    styleUrls: ['./evaluation-old.component.scss']
+    selector: 'app-evaluation-calibration',
+    templateUrl: './evaluation-calibration.component.html',
+    styleUrls: ['./evaluation-calibration.component.scss']
 })
-export class EvaluationOldComponent implements OnInit {
-    @ViewChild('staticTabs') staticTabs: TabsetComponent;
-    public chartLabels: string[] = ['Pontuação atingida', 'Pontuação restante'];
-    public positiveChartColors = [{ backgroundColor: ['#46BA0B', '#D8D8D8'] }];
-    public centerChartColors = [{ backgroundColor: ['#FDC14A', '#D8D8D8'] }];
-    public negativeChartColors = [{ backgroundColor: ['#D8D8D8', '#F1634B'] }];
-
-    public chartOptions = {
-        cutoutPercentage: 70,
-        responsive: false,
-        tooltips: {
-            backgroundColor: '#F9FBFC',
-            titleFontSize: 16,
-            titleFontColor: '#2d2d2d',
-            bodyFontColor: '#2d2d2d',
-            bodyFontSize: 14,
-            displayColors: false,
-            borderWidth: 0
-        }
-    };
-
+export class EvaluationCalibrationComponent implements OnInit {
+    public visibles = [];
     public evaluation = {
         id: 1,
         createdAt: new Date().getTime(),
@@ -49,7 +29,7 @@ export class EvaluationOldComponent implements OnInit {
                 description: 'Demonstrou capacidade do entendimento do problema, sem afobação e evitou retrabalho por falha de escopo.',
                 autoScore: 3,
                 leaderScore: 5,
-                calibratedScore: 4,
+                calibratedScore: 0,
                 comment: 'comentário 1'
             },
             {
@@ -58,8 +38,8 @@ export class EvaluationOldComponent implements OnInit {
                 description: 'Utilizou as melhores práticas na execução do trabalho técnico, produzindo uma entrega coerente com a demanda e de fácil manutenção.',
                 autoScore: 4,
                 leaderScore: 3,
-                calibratedScore: 3,
-                comment: 'comentário 2'
+                calibratedScore: 0,
+                comment: ''
             },
             {
                 id: 3,
@@ -67,7 +47,7 @@ export class EvaluationOldComponent implements OnInit {
                 description: 'Compreende e propõe soluções envolvendo múltiplas partes e sistemas, avaliando o acomplamento entre elas em termos técnicos e de negócio.',
                 autoScore: 0,
                 leaderScore: 2,
-                calibratedScore: 2,
+                calibratedScore: 0,
                 comment: 'comentário 3'
             },
             {
@@ -76,8 +56,8 @@ export class EvaluationOldComponent implements OnInit {
                 description: 'Capacidade de antever o esforço e prazo de suas atividades e daquelas desempenhadas pelo time.',
                 autoScore: 2,
                 leaderScore: 3,
-                calibratedScore: 3,
-                comment: 'comentário 4'
+                calibratedScore: 0,
+                comment: ''
             },
             {
                 id: 5,
@@ -85,8 +65,8 @@ export class EvaluationOldComponent implements OnInit {
                 description: 'Realiza o mapeamento de domínios reais para modelos capazes de expressar com complexidade adequada ao objeto em desenvolvimento.',
                 autoScore: 0,
                 leaderScore: 3,
-                calibratedScore: 3,
-                comment: 'comentário 5'
+                calibratedScore: 0,
+                comment: ''
             },
             {
                 id: 6,
@@ -94,8 +74,8 @@ export class EvaluationOldComponent implements OnInit {
                 description: 'Demonstra maestria sobre seu ambiente de desenvolvimento, ferramental e versionamento, em especial na colaboração em time.',
                 autoScore: 4,
                 leaderScore: 4,
-                calibratedScore: 4,
-                comment: 'comentário 6'
+                calibratedScore: 0,
+                comment: ''
             },
             {
                 id: 7,
@@ -103,8 +83,8 @@ export class EvaluationOldComponent implements OnInit {
                 description: 'Mantém o time, seus pares e coordenadores, atualizados do estado de suas tarefas e dificuldades pelo caminho.',
                 autoScore: 3,
                 leaderScore: 2,
-                calibratedScore: 2,
-                comment: 'comentário 7'
+                calibratedScore: 0,
+                comment: ''
             }
         ],
         interpersonals: [
@@ -114,7 +94,7 @@ export class EvaluationOldComponent implements OnInit {
                 description: 'Demonstrou capacidade do entendimento do problema, sem afobação e evitou retrabalho por falha de escopo.',
                 autoScore: 3,
                 leaderScore: 5,
-                calibratedScore: 4,
+                calibratedScore: 0,
                 comment: 'comentário 8'
             }
         ],
@@ -125,7 +105,7 @@ export class EvaluationOldComponent implements OnInit {
                 description: 'Demonstrou capacidade do entendimento do problema, sem afobação e evitou retrabalho por falha de escopo.',
                 autoScore: 3,
                 leaderScore: 5,
-                calibratedScore: 4,
+                calibratedScore: 0,
                 comment: 'comentário 9'
             }
         ]
@@ -135,10 +115,18 @@ export class EvaluationOldComponent implements OnInit {
     }
 
     ngOnInit() {
+
     }
 
-    selectTab(tabId: number) {
-        this.staticTabs.tabs[tabId].active = true;
+    public turnVisible(id: any): void {
+        this.visibles.push(id);
     }
 
+    public save(): void {
+
+    }
+
+    public finish(): void {
+
+    }
 }

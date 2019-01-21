@@ -64,7 +64,7 @@
                         <p class="evaluation__title">
                             Habilidades
                         </p>
-                        <div *ngFor="let technical of evaluation.technicals" class="evaluation__card">
+                        <div *ngFor="let technical of evaluation.technicals; let i = index" class="evaluation__card">
                             <div class="evaluation__card-left">
                                 <h6 class="evaluation__card-title">
                                     {{technical.title}}
@@ -73,21 +73,52 @@
                                     {{technical.description}}
                                 </p>
                             </div>
-                            <div class="d-flex flex-column align-items-end justify-content-center">
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <div class="evaluation__rating-icon evaluation__rating-icon--grey">0</div>
-                                    <div class="evaluation__rating-icon evaluation__rating-icon--red">1</div>
-                                    <div class="evaluation__rating-icon evaluation__rating-icon--red">2</div>
-                                    <div class="evaluation__rating-icon evaluation__rating-icon--yellow">3</div>
-                                    <div class="evaluation__rating-icon evaluation__rating-icon--green">4</div>
-                                    <div class="evaluation__rating-icon evaluation__rating-icon--green mr-0">5</div>
+                            <div class="d-flex align-items-flex-start position-relative">
+                                <div class="evaluation__card-score">
+                                    <h6>auto</h6>
+                                    <span *ngIf="!visibles.includes(technical.id)" class="evaluation-calibration__text"
+                                          (click)="turnVisible(technical.id)">
+                                        VER
+                                    </span>
+                                    <p *ngIf="visibles.includes(technical.id)" [ngStyle]="{'color':
+                                        technical.autoScore === 0 ? '#A0B0C0':
+                                        technical.autoScore === 3 ? '#FDC14A':
+                                        technical.autoScore >= 4 ? '#46BA0B':
+                                        '#F1634B'
+                                    }">
+                                        {{technical.autoScore}}
+                                    </p>
+                                </div>
+                                <div class="evaluation__card-score">
+                                    <h6>líder</h6>
+                                    <p [ngStyle]="{'color':
+                                        technical.leaderScore === 0 ? '#A0B0C0':
+                                        technical.leaderScore === 3 ? '#FDC14A':
+                                        technical.leaderScore >= 4 ? '#46BA0B':
+                                        '#F1634B'
+                                    }">
+                                        {{technical.leaderScore}}
+                                    </p>
+                                </div>
+                                <div class="evaluation__card-score">
+                                    <h6>calibrada</h6>
+                                    <input type="number" [(ngModel)]="technical.calibratedScore"
+                                           class="input__calibrated" title="" max="5" min="0"
+                                           [ngStyle]="{'color':
+                                        technical.calibratedScore === 0 ? '#A0B0C0':
+                                        technical.calibratedScore === 3 ? '#FDC14A':
+                                        technical.calibratedScore >= 4 ? '#46BA0B':
+                                        '#F1634B'
+                                    }">
                                 </div>
                                 <ng-template #pop>
-                                    <input class="input__popover" type="text" title="" placeholder="Comente aqui" [(ngModel)]="technical.comment">
+                                    <input class="input__popover" type="text" title="" [(ngModel)]="technical.comment">
                                 </ng-template>
-                                <p class="evaluation__rating-comment" [popover]="pop" [outsideClick]="true" placement="bottom">
-                                    ADICIONAR COMENTÁRIO
-                                </p>
+                                <div *ngIf="technical.comment !== ''"
+                                     class="evaluation-calibration__info" [popover]="pop" [outsideClick]="true"
+                                     placement="bottom" triggers="mouseenter:mouseleave">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
                             </div>
                         </div>
                     </tab>
@@ -102,6 +133,9 @@
             <div class="col-12 d-flex justify-content-end my-4">
                 <button class="d-inline-block mr-3 btn--yellow-fill btn--big" (click)="save()">
                     SALVAR
+                </button>
+                <button class="d-inline-block btn--blue-fill btn--big" (click)="finish()">
+                    FINALIZAR E ENVIAR
                 </button>
             </div>
         </div>

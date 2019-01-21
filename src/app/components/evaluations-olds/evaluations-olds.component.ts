@@ -38,7 +38,7 @@ export class EvaluationsOldsComponent implements OnInit {
                 performance: 0,
                 potential: 0
             },
-            calibrate: {
+            calibrated: {
                 performance: 3.72,
                 potential: 2.25,
             },
@@ -57,7 +57,7 @@ export class EvaluationsOldsComponent implements OnInit {
                 performance: 0,
                 potential: 0
             },
-            calibrate: {
+            calibrated: {
                 performance: 3.9,
                 potential: 4.3,
             },
@@ -76,7 +76,7 @@ export class EvaluationsOldsComponent implements OnInit {
                 performance: 0,
                 potential: 0
             },
-            calibrate: {
+            calibrated: {
                 performance: 3,
                 potential: 3.1,
             },
@@ -95,7 +95,7 @@ export class EvaluationsOldsComponent implements OnInit {
                 performance: 0,
                 potential: 0
             },
-            calibrate: {
+            calibrated: {
                 performance: 4.6,
                 potential: 4.4,
             },

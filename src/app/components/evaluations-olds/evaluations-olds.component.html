@@ -79,21 +79,21 @@
                                 <div class="doughnut--small d-flex justify-content-center">
                                     <div class="doughnut__title">
                                     <span [ngClass]="
-                                            evaluation.calibrate.performance < 3 ? 'doughnut__title--low' :
-                                            evaluation.calibrate.performance >= 3 && evaluation.calibrate.performance < 4 ? 'doughnut__title--yellow' :
-                                            evaluation.calibrate.performance >= 4 ? 'doughnut__title--green' : ''"
+                                            evaluation.calibrated.performance < 3 ? 'doughnut__title--low' :
+                                            evaluation.calibrated.performance >= 3 && evaluation.calibrated.performance < 4 ? 'doughnut__title--yellow' :
+                                            evaluation.calibrated.performance >= 4 ? 'doughnut__title--green' : ''"
                                     >
-                                        {{evaluation.calibrate.performance}}
+                                        {{evaluation.calibrated.performance}}
                                     </span>
                                         <p>performance</p>
                                     </div>
                                     <canvas baseChart
-                                            [data]="[evaluation.calibrate.performance, 5 - evaluation.calibrate.performance]"
+                                            [data]="[evaluation.calibrated.performance, 5 - evaluation.calibrated.performance]"
                                             [labels]="chartLabels"
                                             [colors]="
-                                                evaluation.calibrate.performance < 3 ? negativeChartColors :
-                                                evaluation.calibrate.performance >= 3 && evaluation.calibrate.performance < 4 ? centerChartColors :
-                                                evaluation.calibrate.performance >= 4 ? positiveChartColors : ''
+                                                evaluation.calibrated.performance < 3 ? negativeChartColors :
+                                                evaluation.calibrated.performance >= 3 && evaluation.calibrated.performance < 4 ? centerChartColors :
+                                                evaluation.calibrated.performance >= 4 ? positiveChartColors : ''
                                             "
                                             [legend]="false"
                                             [chartType]="'doughnut'"
@@ -106,21 +106,21 @@
                                 <div class="doughnut--small d-flex justify-content-center">
                                     <div class="doughnut__title">
                                     <span [ngClass]="
-                                            evaluation.calibrate.potential < 3 ? 'doughnut__title--low' :
-                                            evaluation.calibrate.potential >= 3 && evaluation.calibrate.potential < 4 ? 'doughnut__title--yellow' :
-                                            evaluation.calibrate.potential >= 4 ? 'doughnut__title--green' : ''"
+                                            evaluation.calibrated.potential < 3 ? 'doughnut__title--low' :
+                                            evaluation.calibrated.potential >= 3 && evaluation.calibrated.potential < 4 ? 'doughnut__title--yellow' :
+                                            evaluation.calibrated.potential >= 4 ? 'doughnut__title--green' : ''"
                                     >
-                                        {{evaluation.calibrate.potential}}
+                                        {{evaluation.calibrated.potential}}
                                     </span>
                                         <p>potencial</p>
                                     </div>
                                     <canvas baseChart
-                                            [data]="[evaluation.calibrate.potential, 5 - evaluation.calibrate.potential]"
+                                            [data]="[evaluation.calibrated.potential, 5 - evaluation.calibrated.potential]"
                                             [labels]="chartLabels"
                                             [colors]="
-                                                evaluation.calibrate.potential < 3 ? negativeChartColors :
-                                                evaluation.calibrate.potential >= 3 && evaluation.calibrate.potential < 4 ? centerChartColors :
-                                                evaluation.calibrate.potential >= 4 ? positiveChartColors : ''
+                                                evaluation.calibrated.potential < 3 ? negativeChartColors :
+                                                evaluation.calibrated.potential >= 3 && evaluation.calibrated.potential < 4 ? centerChartColors :
+                                                evaluation.calibrated.potential >= 4 ? positiveChartColors : ''
                                             "
                                             [legend]="false"
                                             [chartType]="'doughnut'"

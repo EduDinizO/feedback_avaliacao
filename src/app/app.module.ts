@@ -35,6 +35,7 @@ import { NotesComponent } from './components/notes/notes.component';
 import { EvaluationComponent } from './components/evaluation/evaluation.component';
 import { EvaluationOldComponent } from './components/evaluation-old/evaluation-old.component';
 import { EvaluationsOldsComponent } from './components/evaluations-olds/evaluations-olds.component';
+import { EvaluationCalibrationComponent } from './components/evaluation-calibration/evaluation-calibration.component';
 
 @NgModule({
     declarations: [
@@ -55,6 +56,7 @@ import { EvaluationsOldsComponent } from './components/evaluations-olds/evaluati
         EvaluationComponent,
         EvaluationOldComponent,
         EvaluationsOldsComponent,
+        EvaluationCalibrationComponent,
     ],
     imports: [
         BrowserModule,

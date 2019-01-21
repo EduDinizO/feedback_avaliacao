@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'app-assess',
@@ -23,6 +23,7 @@ export class AssessComponent implements OnInit {
 
     constructor(
         private route: ActivatedRoute,
+        private router: Router
     ) {
     }
 
@@ -39,6 +40,7 @@ export class AssessComponent implements OnInit {
             case 2:
                 this.presentEvaluation = false;
                 this.pastEvaluation = true;
+                this.router.navigate(['avaliado', 1, 'avaliacoes']);
                 break;
         }
     }

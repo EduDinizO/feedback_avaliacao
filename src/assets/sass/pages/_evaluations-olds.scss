@@ -1,0 +1,31 @@
+.evaluation {
+    &__box {
+        margin-top: 4.2rem;
+        box-shadow: 4px 4px 1.1rem 0 rgba($color-grey, 0.2);
+        text-align: center;
+        &:hover {
+            cursor: pointer;
+        }
+        &-title {
+            padding: 0.5rem;
+            background-color: $color-grey;
+            font-family: $font-ossb;
+            font-size: 1.2rem;
+            color: $color-white;
+        }
+        &-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 2.5rem 0 2.5rem;
+            &>div {
+                max-width: 10rem;
+                h6 {
+                    padding: 1.5rem 0;
+                    font-family: $font-osb;
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+}

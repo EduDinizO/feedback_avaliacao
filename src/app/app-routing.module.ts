@@ -8,13 +8,20 @@ import { PageNotFoundComponent } from '@app/pages/page-not-found/page-not-found.
 import { RootComponent } from '@app/root/root.component';
 import { EvaluatedComponent } from '@app/pages/evaluated/evaluated.component';
 import { AssessComponent } from '@app/pages/assess/assess.component';
+import { EvaluationOldComponent } from '@app/components/evaluation-old/evaluation-old.component';
+import { EvaluationsOldsComponent } from '@app/components/evaluations-olds/evaluations-olds.component';
 
 const routes: Routes = [
     {
         path: '', component: RootComponent, children: [
             { path: 'home', component: HomeComponent },
             { path: 'avaliados', component: EvaluatedComponent },
-            { path: 'avaliado/:id', component: AssessComponent }
+            {
+                path: 'avaliado/:id', component: AssessComponent, children: [
+                    { path: 'avaliacao/:id', component: EvaluationOldComponent },
+                    { path: 'avaliacoes', component: EvaluationsOldsComponent}
+                ]
+            },
         ]
     },
     { path: '**', component: PageNotFoundComponent }

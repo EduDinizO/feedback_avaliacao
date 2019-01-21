@@ -68,6 +68,9 @@
             &:not(:last-of-type) {
                 margin-right: 10%;
             }
+            &:hover {
+                cursor: pointer;
+            }
         }
         &-img {
             width: 12rem;

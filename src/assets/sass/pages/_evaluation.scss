@@ -77,10 +77,6 @@
             color: $color-black;
             line-height: 1.2;
         }
-        &-right {
-            display: flex;
-            align-items: center;
-        }
         &-score {
             text-align: center;
             margin-right: 1rem;
@@ -92,6 +88,59 @@
             p {
                 font-family: $font-oseb;
                 font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 1rem;
+            height: 1rem;
+            padding: 1rem;
+            margin-right: 0.5rem;
+            border-radius: 5rem;
+            background-color: $color-grey-light-1;
+            font-family: $font-ossb;
+            font-size: 1.1rem;
+            &:hover {
+                cursor: pointer;
+                color: $color-white;
+            }
+            &--grey {
+                &:hover {
+                    background-color: $color-grey;
+                }
+            }
+            &--red {
+                &:hover {
+                    background-color: $color-red;
+                }
+            }
+            &--yellow {
+                &:hover {
+                    background-color: $color-yellow;
+                }
+            }
+            &--green {
+                &:hover {
+                    background-color: $color-green;
+                }
+            }
+        }
+        &-comment {
+            margin-top: 1.25rem;
+            font-family: $font-oseb;
+            font-size: 0.9rem;
+            color: $color-blue;
+            text-decoration: underline;
+            &:hover {
+                cursor: pointer;
             }
         }
     }

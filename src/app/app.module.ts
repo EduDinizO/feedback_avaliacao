@@ -26,6 +26,7 @@ import { ChartsModule } from 'ng2-charts';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { PopoverModule } from 'ngx-bootstrap/popover';
 // COMPONENTS
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -33,6 +34,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { EvaluationComponent } from './components/evaluation/evaluation.component';
 import { EvaluationOldComponent } from './components/evaluation-old/evaluation-old.component';
+import { EvaluationsOldsComponent } from './components/evaluations-olds/evaluations-olds.component';
 
 @NgModule({
     declarations: [
@@ -52,6 +54,7 @@ import { EvaluationOldComponent } from './components/evaluation-old/evaluation-o
         AssessComponent,
         EvaluationComponent,
         EvaluationOldComponent,
+        EvaluationsOldsComponent,
     ],
     imports: [
         BrowserModule,
@@ -63,6 +66,7 @@ import { EvaluationOldComponent } from './components/evaluation-old/evaluation-o
         ModalModule.forRoot(),
         BsDropdownModule.forRoot(),
         TabsModule.forRoot(),
+        PopoverModule.forRoot(),
     ],
     providers: [
         AuthService,

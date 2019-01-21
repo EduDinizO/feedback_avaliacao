@@ -1,0 +1,138 @@
+<div class="header__evaluation">
+    <div class="container">
+        <div class="row">
+            <h6 class="col-12 header__evaluation-date">
+                AVALIAÇÕES ANTERIORES
+            </h6>
+        </div>
+    </div>
+</div>
+<div class="evaluation">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let evaluation of evaluations" class="col-md-6 col-12">
+                <div class="evaluation__box" (click)="loadEvaluation(evaluation.id)">
+                    <h6 class="evaluation__box-title">
+                        {{evaluation.createdAt | date: 'MMM/yyyy' | uppercase}}
+                    </h6>
+                    <div class="evaluation__box-content">
+                        <div>
+                            <h6>Auto</h6>
+                            <div class="doughnut mb-4">
+                                <div class="doughnut--small d-flex justify-content-center">
+                                    <div class="doughnut__title">
+                                    <span [ngClass]="
+                                            evaluation.auto.performance < 3 ? 'doughnut__title--low' :
+                                            evaluation.auto.performance >= 3 && evaluation.auto.performance < 4 ? 'doughnut__title--yellow' :
+                                            evaluation.auto.performance >= 4 ? 'doughnut__title--green' : ''"
+                                    >
+                                        {{evaluation.auto.performance}}
+                                    </span>
+                                        <p>performance</p>
+                                    </div>
+                                    <canvas baseChart
+                                            [data]="[evaluation.auto.performance, 5 - evaluation.auto.performance]"
+                                            [labels]="chartLabels"
+                                            [colors]="
+                                                evaluation.auto.performance < 3 ? negativeChartColors :
+                                                evaluation.auto.performance >= 3 && evaluation.auto.performance < 4 ? centerChartColors :
+                                                evaluation.auto.performance >= 4 ? positiveChartColors : ''
+                                            "
+                                            [legend]="false"
+                                            [chartType]="'doughnut'"
+                                            [options]="chartOptions"
+                                            style="z-index: 2"
+                                    ></canvas>
+                                </div>
+                            </div>
+                            <div class="doughnut mb-4">
+                                <div class="doughnut--small d-flex justify-content-center">
+                                    <div class="doughnut__title">
+                                    <span [ngClass]="
+                                            evaluation.auto.potential < 3 ? 'doughnut__title--low' :
+                                            evaluation.auto.potential >= 3 && evaluation.auto.potential < 4 ? 'doughnut__title--yellow' :
+                                            evaluation.auto.potential >= 4 ? 'doughnut__title--green' : ''"
+                                    >
+                                        {{evaluation.auto.potential}}
+                                    </span>
+                                        <p>potencial</p>
+                                    </div>
+                                    <canvas baseChart
+                                            [data]="[evaluation.auto.potential, 5 - evaluation.auto.potential]"
+                                            [labels]="chartLabels"
+                                            [colors]="
+                                                evaluation.auto.potential < 3 ? negativeChartColors :
+                                                evaluation.auto.potential >= 3 && evaluation.auto.potential < 4 ? centerChartColors :
+                                                evaluation.auto.potential >= 4 ? positiveChartColors : ''
+                                            "
+                                            [legend]="false"
+                                            [chartType]="'doughnut'"
+                                            [options]="chartOptions"
+                                            style="z-index: 2"
+                                    ></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h6>FDTE</h6>
+                            <div class="doughnut mb-4">
+                                <div class="doughnut--small d-flex justify-content-center">
+                                    <div class="doughnut__title">
+                                    <span [ngClass]="
+                                            evaluation.calibrate.performance < 3 ? 'doughnut__title--low' :
+                                            evaluation.calibrate.performance >= 3 && evaluation.calibrate.performance < 4 ? 'doughnut__title--yellow' :
+                                            evaluation.calibrate.performance >= 4 ? 'doughnut__title--green' : ''"
+                                    >
+                                        {{evaluation.calibrate.performance}}
+                                    </span>
+                                        <p>performance</p>
+                                    </div>
+                                    <canvas baseChart
+                                            [data]="[evaluation.calibrate.performance, 5 - evaluation.calibrate.performance]"
+                                            [labels]="chartLabels"
+                                            [colors]="
+                                                evaluation.calibrate.performance < 3 ? negativeChartColors :
+                                                evaluation.calibrate.performance >= 3 && evaluation.calibrate.performance < 4 ? centerChartColors :
+                                                evaluation.calibrate.performance >= 4 ? positiveChartColors : ''
+                                            "
+                                            [legend]="false"
+                                            [chartType]="'doughnut'"
+                                            [options]="chartOptions"
+                                            style="z-index: 2"
+                                    ></canvas>
+                                </div>
+                            </div>
+                            <div class="doughnut mb-4">
+                                <div class="doughnut--small d-flex justify-content-center">
+                                    <div class="doughnut__title">
+                                    <span [ngClass]="
+                                            evaluation.calibrate.potential < 3 ? 'doughnut__title--low' :
+                                            evaluation.calibrate.potential >= 3 && evaluation.calibrate.potential < 4 ? 'doughnut__title--yellow' :
+                                            evaluation.calibrate.potential >= 4 ? 'doughnut__title--green' : ''"
+                                    >
+                                        {{evaluation.calibrate.potential}}
+                                    </span>
+                                        <p>potencial</p>
+                                    </div>
+                                    <canvas baseChart
+                                            [data]="[evaluation.calibrate.potential, 5 - evaluation.calibrate.potential]"
+                                            [labels]="chartLabels"
+                                            [colors]="
+                                                evaluation.calibrate.potential < 3 ? negativeChartColors :
+                                                evaluation.calibrate.potential >= 3 && evaluation.calibrate.potential < 4 ? centerChartColors :
+                                                evaluation.calibrate.potential >= 4 ? positiveChartColors : ''
+                                            "
+                                            [legend]="false"
+                                            [chartType]="'doughnut'"
+                                            [options]="chartOptions"
+                                            style="z-index: 2"
+                                    ></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -32,7 +32,7 @@ export class EvaluationComponent implements OnInit {
                 autoScore: 3,
                 leaderScore: 5,
                 calibrateScore: 4,
-                comment: 'comentário'
+                comment: 'comentário 1'
             },
             {
                 id: 2,
@@ -41,7 +41,7 @@ export class EvaluationComponent implements OnInit {
                 autoScore: 4,
                 leaderScore: 3,
                 calibrateScore: 3,
-                comment: 'comentário'
+                comment: ''
             },
             {
                 id: 3,
@@ -50,7 +50,7 @@ export class EvaluationComponent implements OnInit {
                 autoScore: 0,
                 leaderScore: 2,
                 calibrateScore: 2,
-                comment: 'comentário'
+                comment: 'comentário 3'
             },
             {
                 id: 4,
@@ -59,7 +59,7 @@ export class EvaluationComponent implements OnInit {
                 autoScore: 2,
                 leaderScore: 3,
                 calibrateScore: 3,
-                comment: 'comentário'
+                comment: 'comentário 4'
             },
             {
                 id: 5,
@@ -68,7 +68,7 @@ export class EvaluationComponent implements OnInit {
                 autoScore: 0,
                 leaderScore: 3,
                 calibrateScore: 3,
-                comment: 'comentário'
+                comment: 'comentário 5'
             },
             {
                 id: 6,
@@ -77,7 +77,7 @@ export class EvaluationComponent implements OnInit {
                 autoScore: 4,
                 leaderScore: 4,
                 calibrateScore: 4,
-                comment: 'comentário'
+                comment: 'comentário 6'
             },
             {
                 id: 7,
@@ -86,7 +86,7 @@ export class EvaluationComponent implements OnInit {
                 autoScore: 3,
                 leaderScore: 2,
                 calibrateScore: 2,
-                comment: 'comentário'
+                comment: 'comentário 7'
             }
         ],
         interpersonals: [
@@ -97,7 +97,7 @@ export class EvaluationComponent implements OnInit {
                 autoScore: 3,
                 leaderScore: 5,
                 calibrateScore: 4,
-                comment: 'comentário'
+                comment: 'comentário 8'
             }
         ],
         intrapersonals: [
@@ -108,7 +108,7 @@ export class EvaluationComponent implements OnInit {
                 autoScore: 3,
                 leaderScore: 5,
                 calibrateScore: 4,
-                comment: 'comentário'
+                comment: 'comentário 9'
             }
         ]
     };

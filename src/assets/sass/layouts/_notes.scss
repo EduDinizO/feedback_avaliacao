@@ -40,8 +40,8 @@
         }
     }
     &__body {
-        max-height: calc(100vh - 5rem);
-        overflow-y: scroll;
+        //max-height: calc(100vh - 5rem);
+        overflow-y: auto;
         margin-right: 0.3rem;
         &::-webkit-scrollbar {
             width: 0.4rem;

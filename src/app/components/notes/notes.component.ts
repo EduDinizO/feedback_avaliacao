@@ -31,6 +31,24 @@ export class NotesComponent implements OnInit {
             description: 'Demonstrou capacidade do entendimento do problema, sem afobação e evitou retrabalho por falha de escopo.',
             date: '25/08/2018'
         },
+        {
+            name: 'Igor \'Bunda\' Salvati',
+            subject: 'Compreensão do problema',
+            description: 'Demonstrou capacidade do entendimento do problema, sem afobação e evitou retrabalho por falha de escopo.',
+            date: '25/08/2018'
+        },
+        {
+            name: 'Marcio \'Franco\' Campos',
+            subject: 'Compreensão do problema',
+            description: 'Demonstrou capacidade do entendimento do problema, sem afobação e evitou retrabalho por falha de escopo.',
+            date: '25/08/2018'
+        },
+        {
+            name: 'Cindy \'Chun Li\' Kobayashi',
+            subject: 'Compreensão do problema',
+            description: 'Demonstrou capacidade do entendimento do problema, sem afobação e evitou retrabalho por falha de escopo.',
+            date: '25/08/2018'
+        },
     ];
 
     constructor() {
@@ -39,8 +57,12 @@ export class NotesComponent implements OnInit {
     ngOnInit() {
     }
 
-    public createNote():void {
+    public createNote(): void {
 
+    }
+
+    public getWindowHeight(): number {
+        return 1;
     }
 
 }

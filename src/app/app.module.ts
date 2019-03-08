@@ -29,7 +29,6 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 // COMPONENTS
 import { AppComponent } from './app.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { EvaluationComponent } from './components/evaluation/evaluation.component';
@@ -48,7 +47,6 @@ import { EvaluationCalibrationComponent } from './components/evaluation-calibrat
         InputFilterPipe,
         // COMPONENTS
         AppComponent,
-        FooterComponent,
         HeaderComponent,
         NotesComponent,
         ScheduleModalComponent,
